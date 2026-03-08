@@ -32,12 +32,7 @@ const UseDeCleanupToday = () => {
         {/* Cards Layout */}
         <div className="flex flex-col lg:flex-row gap-8 items-stretch">
           {/* Base Card */}
-          <Link
-            href="https://farcaster.xyz/miniapps/SfsGBDcHpuSA/decleanup-rewards"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 relative group block"
-          >
+          <div className="flex-1 relative group">
             <div className="absolute inset-0 bg-blue-900/10 rounded-3xl blur-xl group-hover:bg-blue-900/20 transition-all duration-500"></div>
             <div className="relative flex h-full flex-col bg-neutral-900 border border-neutral-800 rounded-3xl p-8 overflow-hidden group-hover:border-blue-500/50 transition-all duration-300">
               <div className="absolute top-0 right-0 p-4 opacity-50 pointer-events-none">
@@ -66,11 +61,16 @@ const UseDeCleanupToday = () => {
                 </div>
               </div>
 
-              <div className="mt-auto pt-8 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 group-hover:text-white transition-colors">
-                Open on Farcaster <ArrowUpRight className="w-4 h-4" />
+              <div className="mt-auto pt-8 flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-widest">
+                <a href="https://farcaster.xyz/miniapps/SfsGBDcHpuSA/decleanup-rewards" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white transition-colors flex items-center gap-1">
+                  Open on Farcaster <ArrowUpRight className="w-4 h-4" />
+                </a>
+                <a href="https://base.app/app/miniapp.decleanup.net" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-white transition-colors flex items-center gap-1">
+                  Open on Base app <ArrowUpRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
-          </Link>
+          </div>
 
           {/* Celo Card */}
           <Link

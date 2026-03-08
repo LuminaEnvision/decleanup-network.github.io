@@ -10,11 +10,9 @@ const NavLink = ({ variant = "full" }: { variant?: NavLinkVariant }) => {
 
   return (
     <nav className="relative overflow-hidden">
-      {showFooter && <Divider className="" />}
-
       {showFooter && (
         <>
-          <Divider className="mt-6 bg-gray-800" />
+          <Divider className="" />
 
           {/* Footer - Resources, Technical, Support */}
           <footer className="mt-6 pt-8 border-t border-gray-800">
