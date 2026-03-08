@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 const steps = [
-  { number: "1.", title: "Find your spot" },
-  { number: "2.", title: "Do the work" },
+  { number: "1.", title: "Find your spot and take photo" },
+  { number: "2.", title: "Do the cleanup work" },
   { number: "3.", title: "Photograph the result" },
   { number: "4.", title: "Earn your reward" },
 ];

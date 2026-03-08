@@ -41,7 +41,7 @@ const UseDeCleanupToday = () => {
             <div className="absolute inset-0 bg-blue-900/10 rounded-3xl blur-xl group-hover:bg-blue-900/20 transition-all duration-500"></div>
             <div className="relative flex h-full flex-col bg-neutral-900 border border-neutral-800 rounded-3xl p-8 overflow-hidden group-hover:border-blue-500/50 transition-all duration-300">
               <div className="absolute top-0 right-0 p-4 opacity-50 pointer-events-none">
-                <Smartphone className="text-blue-500 w-32 h-32 -rotate-12 translate-x-4 translate-y-4 opacity-10" />
+                <Smartphone className="text-blue-500 w-32 h-32 -rotate-12 translate-x-4 translate-y-4 opacity-30" />
               </div>
 
               <div className="flex items-center gap-3 mb-6">
@@ -82,7 +82,7 @@ const UseDeCleanupToday = () => {
             <div className="absolute inset-0 bg-[#FAFF00]/5 rounded-3xl blur-xl group-hover:bg-[#FAFF00]/10 transition-all duration-500"></div>
             <div className="relative flex h-full flex-col bg-neutral-900 border border-neutral-800 rounded-3xl p-8 overflow-hidden group-hover:border-[#FAFF00]/50 transition-all duration-300">
               <div className="absolute top-0 right-0 p-4 opacity-50 pointer-events-none">
-                <Layers className="text-[#FAFF00] w-32 h-32 rotate-12 translate-x-4 translate-y-4 opacity-10" />
+                <Layers className="text-[#FAFF00] w-32 h-32 rotate-12 translate-x-4 translate-y-4 opacity-30" />
               </div>
 
               <div className="flex items-center gap-3 mb-6">

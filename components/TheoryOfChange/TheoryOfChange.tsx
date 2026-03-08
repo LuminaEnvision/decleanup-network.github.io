@@ -9,7 +9,9 @@ import {
     ArrowRight
 } from "lucide-react";
 
-export default function TheoryOfChange() {
+type TheoryOfChangeProps = { hideAppendix?: boolean };
+
+export default function TheoryOfChange({ hideAppendix }: TheoryOfChangeProps) {
     return (
         <div className="w-full relative py-8">
             {/* Background Grid */}
@@ -22,10 +24,13 @@ export default function TheoryOfChange() {
             ></div>
 
             <div className="max-w-7xl mx-auto px-4 relative z-10">
+                {!hideAppendix && (
                 <div className="flex items-center gap-3 mb-12">
                     <span className="text-xs font-mono text-gray-300 border border-gray-800 px-2 py-1 rounded">APPENDIX A</span>
                     <h2 className="text-3xl text-white font-bebas tracking-wide">THEORY OF <span className="text-[#58B12F]">CHANGE</span></h2>
                 </div>
+                )}
+                {hideAppendix && <div className="mb-8" />}
 
                 {/* Flow Container */}
                 <div className="flex flex-col lg:flex-row items-stretch justify-between gap-0 relative">
