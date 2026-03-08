@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StartCleaningChoice from "@/components/StartCleaningChoice/StartCleaningChoice";
 
 const Hero = () => {
   return (
@@ -46,19 +47,14 @@ const Hero = () => {
           Join volunteers worldwide turning trash pickup into verified, rewarded impact.
         </p>
 
-        {/* CTAs - primary: Get Started, secondary: How It Works */}
+        {/* CTAs - primary: Start Cleaning (modal), secondary: How it works */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Link
-            href="/get-started"
-            className="rounded-xl bg-white px-6 py-3.5 font-semibold text-black transition-all duration-300 hover:bg-white/90 hover:shadow-[0_0_24px_rgba(255,255,255,0.15)] min-h-[44px] flex items-center justify-center"
-          >
-            Start Cleaning
-          </Link>
+          <StartCleaningChoice />
           <Link
             href="/userguide"
             className="rounded-xl border border-white/20 px-6 py-3.5 font-medium text-white transition-all duration-300 hover:border-white/40 hover:bg-white/5 min-h-[44px] flex items-center justify-center"
           >
-            See How It Works
+            How it works
           </Link>
         </div>
       </div>

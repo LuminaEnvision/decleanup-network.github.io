@@ -4,7 +4,6 @@ import TokenizeImpactSection from "@/components/HowToTokonizeImpact/TokenizeImpa
 import UseDeCleanupToday from "@/components/UseDeCleanupToday/UseDeCleanupToday";
 import CommunityImpactSection from "@/components/CommunityImpactSection/CommunityImpactSection";
 import TotalImpactSection from "@/components/TotalImpactSection/TotalImpactSection";
-import AppendixSection from "@/components/AppendixSection/AppendixSection";
 import JoinTheMovementSection from "@/components/JoinTheMovementSection/JoinTheMovementSection";
 import NavLink from "@/components/NavLink/NavLink";
 
@@ -17,7 +16,6 @@ const Page = () => {
       <UseDeCleanupToday />
       <CommunityImpactSection />
       <TotalImpactSection />
-      <AppendixSection />
       <JoinTheMovementSection />
       <NavLink variant="full" />
     </main>

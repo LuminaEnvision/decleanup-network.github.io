@@ -8,26 +8,22 @@ const cards = [
   {
     smallTitle: "Individuals and communities who clean, care and act",
     title: "For those who care about the planet",
-    body: "Choose how you want to use the app: within other platforms with minimum features or full experience in browser. We'll show you what you need and where to go.",
-    bullets: [
-      "Join or organize cleanup actions",
-      "Take photos of the result",
-      "Get recognition and rewards for real impact",
-    ],
+    body: "Choose how you want to use the app: minimum features or full experience. And then steps are simple — Join or organize cleanup — Take photos before and after — Get recognition and rewards for real impact.",
+    bullets: [],
     cta: "Learn more and begin →",
     href: "/get-started",
   },
   {
     smallTitle: "Web3-native, but impact first",
     title: "For those who build and coordinate impact",
-    body: "Use onchain tools to coordinate cleanups, rewards, and community governance.",
+    body: "Use our tools to coordinate cleanups, rewards and community governance in your location.",
     bullets: [
       "Participate in governance and proposals",
       "Help shape how impact is verified and rewarded",
       "Build on open, impact-focused infrastructure",
     ],
     cta: "Dive deeper to the network →",
-    href: "/coordinate",
+    href: "/litepaper#coordinate",
   },
   {
     smallTitle: "Capital with intention",
@@ -36,10 +32,10 @@ const cards = [
     bullets: [
       "Fund cleanup actions at scale",
       "Support open verification infrastructure",
-      "Hold tokens connected to real-world impact",
+      "Hold tokens connected to real world",
     ],
     cta: "See how funding works →",
-    href: "/funders",
+    href: "/litepaper#forfunders",
   },
 ];
 
@@ -54,17 +50,19 @@ export default function WhoIsThisForCards() {
           <h2 className="mb-3 text-xl font-bebas font-medium text-white uppercase tracking-wide">
             {card.title}
           </h2>
-          <p className="mb-5 min-h-[6.5rem] text-gray-200 text-sm leading-relaxed">
+          <p className="mb-5 text-gray-200 text-sm leading-relaxed">
             {card.body}
           </p>
-          <ul className="mb-6 min-h-[7.5rem] list-none space-y-2 text-sm text-gray-300">
-            {card.bullets.map((item) => (
-              <li key={item} className="flex items-start gap-2">
-                <span className="text-[#58B12F] shrink-0">•</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+          {card.bullets.length > 0 && (
+            <ul className="mb-6 min-h-[7.5rem] list-none space-y-2 text-sm text-gray-300">
+              {card.bullets.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-[#58B12F] shrink-0">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )}
           <span className="mt-auto inline-flex items-center gap-2 text-[#58B12F] hover:text-[#FAFF00] font-medium transition-colors">
             {card.cta}
           </span>
