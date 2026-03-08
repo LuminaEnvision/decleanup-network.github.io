@@ -54,17 +54,21 @@ export default function LitepaperPage() {
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Hero - same heading style as tokenomics page */}
       <header id="top" className="relative pt-28 pb-14 px-6 border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
           backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)`,
           backgroundSize: "50px 50px",
         }} />
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bebas text-white tracking-wide mb-3">
-            DECLEANUP NETWORK LITEPAPER
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#FAFF00]/20 bg-[#FAFF00]/5 text-[#FAFF00] text-xs font-mono mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FAFF00] animate-pulse" />
+            LITEPAPER
+          </div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tighter mb-4 font-bebas">
+            DECLEANUP NETWORK <span className="text-[#58B12F]">LITEPAPER</span>
           </h1>
-          <p className="text-lg text-gray-200 max-w-xl mx-auto mb-6">
+          <p className="text-lg md:text-xl text-gray-200 max-w-xl mx-auto font-light mb-6">
             Infrastructure for verifiable, governable, and fundable environmental impact.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
