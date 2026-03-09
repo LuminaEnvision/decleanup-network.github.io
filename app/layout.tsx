@@ -20,23 +20,23 @@ const SITE_URL = "https://decleanup.net";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Cleanups with action. Proof under verified. Fundable impact. | DeCleanup Network",
+  title: "Clean Local. Prove Global. | DeCleanup Network",
   description:
-    "A global platform that verifies environmental cleanups and turns them into measurable, fundable impact.",
+    "Join volunteers worldwide turning trash pickup into verified, rewarded impact. DeCleanup Network converts local action into global proof.",
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Cleanups with action. Proof under verified. Fundable impact. | DeCleanup Network",
+    title: "Clean Local. Prove Global. | DeCleanup Network",
     description:
-      "A global platform that verifies environmental cleanups and turns them into measurable, fundable impact.",
+      "Join volunteers worldwide turning trash pickup into verified, rewarded impact. DeCleanup Network converts local action into global proof.",
     url: SITE_URL,
     siteName: "DeCleanup Network",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cleanups with action. Proof under verified. Fundable impact. | DeCleanup Network",
+    title: "Clean Local. Prove Global. | DeCleanup Network",
     description:
-      "A global platform that verifies environmental cleanups and turns them into measurable, fundable impact.",
+      "Join volunteers worldwide turning trash pickup into verified, rewarded impact. DeCleanup Network converts local action into global proof.",
   },
 };
 

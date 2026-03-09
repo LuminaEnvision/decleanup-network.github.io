@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const galleryImages = [
   { src: "/testimonial1.jpg", alt: "Community cleanup" },
@@ -41,9 +42,12 @@ export default function CommunityImpactSection() {
             href="https://x.com/8oobfbldkiw0i9l/status/1848054399597523225"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-neutral-900 border border-neutral-800 p-6 lg:p-8 rounded-2xl block hover:border-[#58B12F]/30 transition-colors"
+            className="bg-neutral-900 border border-neutral-800 p-6 lg:p-8 rounded-2xl block hover:border-[#58B12F]/30 transition-colors group"
           >
-            <h3 className="text-2xl font-bebas text-white mb-3 tracking-wide">HEM Japan</h3>
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-2xl font-bebas text-white tracking-wide">HEM Japan</h3>
+              <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-[#58B12F] transition-colors shrink-0" />
+            </div>
             <p className="text-gray-400 leading-relaxed">
               Early partner organizing cleanups across Japan using DeCleanup&apos;s verification system. 2024: 12 active users, 9 cleanup events.
             </p>
@@ -52,9 +56,12 @@ export default function CommunityImpactSection() {
             href="https://x.com/trinitymorphy/status/1856394593824014341"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-neutral-900 border border-neutral-800 p-6 lg:p-8 rounded-2xl block hover:border-[#58B12F]/30 transition-colors"
+            className="bg-neutral-900 border border-neutral-800 p-6 lg:p-8 rounded-2xl block hover:border-[#58B12F]/30 transition-colors group"
           >
-            <h3 className="text-2xl font-bebas text-white mb-3 tracking-wide">Pestathon</h3>
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-2xl font-bebas text-white tracking-wide">Pestathon</h3>
+              <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-[#58B12F] transition-colors shrink-0" />
+            </div>
             <p className="text-gray-400 leading-relaxed">
               University campaign combining education + action. Students learned environmental care while cleaning campus. DeCleanup added 120 USDGLO to Atlantis Impact Miner rewards. 2024: 9 active users, 4 cleanup events.
             </p>

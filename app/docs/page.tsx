@@ -1,26 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SubPageNav from "@/components/SubPageNav";
 
 export const metadata: Metadata = {
   title: "DeCleanup Network Documentation",
-  description: "Guides and resources for the DeCleanup Network. Tech stack and where to find more.",
+  description: "Technical guides and resources for the DeCleanup Network infrastructure. Building the layer for verified global impact.",
 };
 
 export default function DocsPage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white font-sans selection:bg-[#58B12F] selection:text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Back + Header */}
+      <SubPageNav />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:py-16">
+        {/* Header */}
         <div className="mb-12 md:mb-16">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-[#58B12F] hover:text-[#58B12F]/80 font-semibold text-sm md:text-base transition-colors duration-200 group"
-          >
-            <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span>Back to Home</span>
-          </Link>
           <div className="text-center mt-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#FAFF00]/20 bg-[#FAFF00]/5 text-[#FAFF00] text-xs font-mono mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#FAFF00] animate-pulse" />

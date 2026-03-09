@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SubPageNav from "@/components/SubPageNav";
 
 export const metadata: Metadata = {
   title: "Coordinate & Scale Impact | DeCleanup Rewards",
   description:
-    "Open infrastructure for transparent, scalable environmental coordination. For those who build and coordinate impact.",
+    "Open infrastructure for transparent, scalable environmental coordination. Scaling local action into global proof.",
 };
 
 const problemItems = [
@@ -55,23 +56,8 @@ const outcomes = [
 export default function CoordinatePage() {
   return (
     <main className="min-h-screen bg-black text-white font-sans selection:bg-[#58B12F] selection:text-black">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-[#58B12F] hover:text-[#FAFF00] font-semibold text-sm md:text-base transition-colors duration-200 group"
-          >
-            <svg
-              className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-200"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span>Back to Home</span>
-          </Link>
-        </div>
+      <SubPageNav />
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:py-16">
 
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bebas uppercase text-white mb-6 tracking-wide">

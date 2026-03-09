@@ -27,13 +27,14 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import LitepaperNav from "@/components/LitepaperNav/LitepaperNav";
+import SubPageNav from "@/components/SubPageNav";
 import StartCleaningChoice from "@/components/StartCleaningChoice/StartCleaningChoice";
 import TheoryOfChange from "@/components/TheoryOfChange/TheoryOfChange";
 import LitepaperWhyPillarCards from "@/components/LitepaperWhyPillarCards/LitepaperWhyPillarCards";
 
 export const metadata: Metadata = {
   title: "DeCleanup Network - Litepaper",
-  description: "Infrastructure for verifiable, governable, and fundable environmental impact. February 2026 Edition.",
+  description: "Infrastructure for verifiable, governable, and fundable environmental impact. Turning local action into verified global proof.",
 };
 
 const scrollSection = "scroll-mt-24";
@@ -42,17 +43,7 @@ export default function LitepaperPage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white font-sans selection:bg-[#58B12F] selection:text-white pb-0">
 
-      {/* Top bar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#0A0A0A]/90 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Image src="/images/decleanup_logo_full.png" alt="DeCleanup" width={32} height={32} className="h-8 w-auto object-contain" />
-          </Link>
-          <div className="flex items-center gap-4 text-sm text-gray-200 font-medium">
-            <StartCleaningChoice variant="litepaper" />
-          </div>
-        </div>
-      </nav>
+      <SubPageNav />
 
       {/* Hero - same heading style as tokenomics page */}
       <header id="top" className="relative pt-28 pb-14 px-6 border-b border-white/5 overflow-hidden">

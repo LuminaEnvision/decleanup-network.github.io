@@ -2,240 +2,543 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import {
+  ArrowLeft,
+  Coins,
+  Shield,
+  ArrowRight,
+  Zap,
+  Lock,
+  Users,
+  Flame,
+  Trophy,
+  ArrowUpRight,
+  TrendingUp,
+  LineChart,
+  BarChart3,
+  Calendar,
+  GanttChartSquare,
+  Network,
+  Milestone,
+  CheckCircle,
+  Clock,
+  LayoutGrid,
+  Heart,
+  Globe,
+  Star,
+  ShieldCheck,
+  Smartphone,
+  Layers,
+  MapPin,
+  FileText,
+  MessageCircle,
+  Wand2,
+  Wallet,
+  Camera,
+  Scan,
+  Link as LinkIcon,
+  Menu,
+  X
+} from "lucide-react";
+import SubPageNav from "@/components/SubPageNav";
 
 export const metadata: Metadata = {
   title: "DeCleanup Network Tokenomics",
-  description: "The dual-token model powering DeCleanup Network's global impact ecosystem",
+  description: "The dual-token model powering the transition from local cleanup action to verified global impact.",
+};
+
+const SectionHeading = ({ badge, title, subtitle }: { badge?: string, title: string, subtitle?: string }) => (
+  <div className="text-center mb-12">
+    {badge && (
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#FAFF00]/20 bg-[#FAFF00]/5 text-[#FAFF00] text-xs font-mono mb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#FAFF00] animate-pulse" />
+        {badge}
+      </div>
+    )}
+    <h2 className="text-4xl md:text-6xl font-bebas text-white mb-4 tracking-tight uppercase">{title}</h2>
+    {subtitle && <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base font-light">{subtitle}</p>}
+  </div>
+);
+
+const AllocationBar = ({ allocations }: { allocations: { label: string, value: number, color: string }[] }) => {
+  const total = allocations.reduce((acc, curr) => acc + curr.value, 0);
+  return (
+    <div className="space-y-4">
+      <div className="h-6 w-full rounded-full overflow-hidden flex bg-neutral-800">
+        {allocations.map((alloc, i) => (
+          <div
+            key={i}
+            style={{ width: `${(alloc.value / total) * 100}%`, backgroundColor: alloc.color }}
+            className="h-full border-r border-black/20 last:border-0"
+            title={`${alloc.label}: ${alloc.value}%`}
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {allocations.map((alloc, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: alloc.color }} />
+            <div className="flex flex-col">
+              <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wider">{alloc.label}</span>
+              <span className="text-sm text-white font-mono">{alloc.value}%</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default function TokenomicsPage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white font-sans selection:bg-[#58B12F] selection:text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Back + Header */}
-        <div className="mb-12 md:mb-16">
-          <Link
-            href="/#token"
-            className="inline-flex items-center gap-2 text-[#58B12F] hover:text-[#58B12F]/80 font-semibold text-sm md:text-base transition-colors duration-200 group"
-          >
-            <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span>Back to Home</span>
-          </Link>
-          <div className="text-center mt-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#FAFF00]/20 bg-[#FAFF00]/5 text-[#FAFF00] text-xs font-mono mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FAFF00] animate-pulse" />
-              TOKENOMICS
+      <SubPageNav />
+
+      <header id="top" className="relative pt-32 pb-16 px-6 border-b border-white/5 overflow-hidden">
+        <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)`,
+          backgroundSize: "50px 50px",
+        }} />
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-[#FAFF00]/20 bg-[#FAFF00]/5 text-[#FAFF00] text-xs font-mono mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FAFF00] animate-pulse" />
+            TOKENOMICS
+          </div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tighter mb-4 font-bebas uppercase">
+            NETWORK <span className="text-[#58B12F]">TOKENS</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-xl mx-auto font-light mb-8">
+            Two tokens. One for action. One for proof.
+          </p>
+          <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-6">
+            DeCleanup runs on two tokens with distinct roles. <span className="text-blue-400 font-medium">$bDCU rewards participation</span>. <span className="text-[#58B12F] font-medium">$cDCU represents verified impact</span> and unlocks governance. Together they connect fast, liquid incentives on Base to long-term reputation and coordination on Celo.
+          </p>
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-6 py-20">
+        {/* Token Cards - Redesigned to match Litepaper Ecosystem style */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-24">
+          {/* $bDCU - Action Token */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-blue-900/10 rounded-3xl blur-xl group-hover:bg-blue-900/20 transition-all duration-500" />
+            <div className="relative flex h-full flex-col bg-neutral-900 border border-neutral-800 rounded-3xl p-8 overflow-hidden group-hover:border-blue-500/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 p-4 opacity-50 pointer-events-none">
+                <Coins className="text-blue-500 w-32 h-32 -rotate-12 translate-x-4 translate-y-4 opacity-10" />
+              </div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">BASE</span>
+                <h3 className="text-3xl text-white font-bebas tracking-wide">$bDCU - Action Token</h3>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="p-4 rounded-xl bg-white/5 border border-white/5 min-h-[84px] flex flex-col justify-center">
+                  <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest block mb-1">Total Supply</span>
+                  <span className="text-lg text-white font-mono tracking-tight">1,000,000,000</span>
+                </div>
+                <div className="p-4 rounded-xl bg-white/5 border border-white/5 min-h-[84px] flex flex-col justify-center">
+                  <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest block mb-1">Type</span>
+                  <span className="text-lg text-white font-mono tracking-tight">Liquid ERC-20</span>
+                </div>
+              </div>
+
+              <div className="text-gray-300 mb-8 text-sm leading-relaxed space-y-4 min-h-[100px]">
+                <p>$bDCU is earned through action and traded freely. It is the entry point for anyone joining the network - no prior knowledge required, no long-term lock-up needed to get started.</p>
+                <p className="italic text-gray-400">Fair launch through Clanker with no pre-mine, no team allocation, and no investor distribution. Every token in circulation was acquired on the open market.</p>
+              </div>
+
+              <div className="mb-8 min-h-[160px]">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Allocation Breakdown</p>
+                <AllocationBar
+                  allocations={[
+                    { label: "Fair Launch", value: 85, color: "#3B82F6" },
+                    { label: "Clanker Vault", value: 15, color: "#1D4ED8" },
+                  ]}
+                />
+              </div>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3 p-3 bg-white/3 rounded-lg border border-white/5 group/item hover:bg-white/5 transition-colors min-h-[64px]">
+                  <Zap className="text-blue-400 w-5 h-5" />
+                  <span className="text-sm text-gray-200">Earn from: Mini app cleanups, streaks, referrals</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white/3 rounded-lg border border-white/5 group/item hover:bg-white/5 transition-colors min-h-[64px]">
+                  <Flame className="text-blue-400 w-5 h-5" />
+                  <span className="text-sm text-gray-200">Vault: Deflationary burns, ecosystem rewards</span>
+                </div>
+              </div>
+
+              <div className="mt-auto space-y-4">
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[140px] px-4 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-center text-xs uppercase tracking-widest transition-colors flex items-center justify-center gap-2">
+                    Swap ETH <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                  <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2&outputCurrency=0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[140px] px-4 py-3 border border-white/20 hover:bg-white/5 text-white font-bold rounded-xl text-center text-xs uppercase tracking-widest transition-colors flex items-center justify-center gap-2">
+                    Swap USDT <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                </div>
+                <div className="p-3 rounded-lg bg-black/40 border border-white/5">
+                  <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest mb-1.5">Contract Base</p>
+                  <a href="https://basescan.org/token/0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" rel="noopener noreferrer" className="text-[11px] text-blue-400 hover:text-blue-300 transition-colors font-mono block truncate">
+                    0x30171b7014...21F12b07
+                  </a>
+                </div>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tighter mb-4 font-bebas">
-              NETWORK <span className="text-[#58B12F]">TOKENS</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-xl mx-auto font-light mb-4">
-              Two tokens. One for action. One for proof.
-            </p>
-            <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
-              DeCleanup runs on two tokens with distinct roles. $bDCU rewards participation. $cDCU represents verified impact and unlocks governance. Together they connect fast, liquid incentives on Base to long-term reputation and coordination on Celo.
-            </p>
+          </div>
+
+          {/* $cDCU - Proof Token */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-[#58B12F]/10 rounded-3xl blur-xl group-hover:bg-[#58B12F]/20 transition-all duration-500" />
+            <div className="relative flex h-full flex-col bg-neutral-900 border border-neutral-800 rounded-3xl p-8 overflow-hidden group-hover:border-[#58B12F]/50 transition-all duration-300">
+              <div className="absolute top-0 right-0 p-4 opacity-50 pointer-events-none">
+                <ShieldCheck className="text-[#58B12F] w-32 h-32 rotate-12 translate-x-4 translate-y-4 opacity-10" />
+              </div>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="bg-[#58B12F] text-black text-[10px] font-bold px-2 py-1 rounded tracking-wider uppercase">CELO</span>
+                <h3 className="text-3xl text-white font-bebas tracking-wide">$cDCU - Proof Token</h3>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="p-4 rounded-xl bg-white/5 border border-white/5 min-h-[84px] flex flex-col justify-center">
+                  <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest block mb-1">Max Supply</span>
+                  <span className="text-lg text-white font-mono tracking-tight">10,000,000</span>
+                </div>
+                <div className="p-4 rounded-xl bg-white/5 border border-white/5 min-h-[84px] flex flex-col justify-center">
+                  <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest block mb-1">Type</span>
+                  <span className="text-lg text-white font-mono tracking-tight">Reputation</span>
+                </div>
+              </div>
+
+              <div className="text-gray-300 mb-8 text-sm leading-relaxed space-y-4 min-h-[100px]">
+                <p>$cDCU cannot be purchased on market. It is issued through verified environmental action on either Base or Celo. This keeps governance in the hands of people who have actually contributed.</p>
+                <p className="italic text-gray-400">Earn directly on the Celo full platform or bridge your verified impact from the Base mini app. Simple, fast, non-transferable reputation.</p>
+              </div>
+
+              <div className="mb-8 min-h-[160px]">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Allocation Breakdown</p>
+                <AllocationBar
+                  allocations={[
+                    { label: "Staking", value: 35, color: "#58B12F" },
+                    { label: "Campaigns", value: 25, color: "#4B9628" },
+                    { label: "Public", value: 20, color: "#3F7C21" },
+                    { label: "Team", value: 10, color: "#32621A" },
+                    { label: "Treasury", value: 5, color: "#264913" },
+                    { label: "Comm", value: 4, color: "#1A300C" },
+                    { label: "Liq", value: 1, color: "#0D1806" },
+                  ]}
+                />
+              </div>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3 p-3 bg-white/3 rounded-lg border border-white/5 group/item hover:bg-white/5 transition-colors min-h-[64px]">
+                  <Trophy className="text-[#FAFF00] w-5 h-5" />
+                  <span className="text-sm text-gray-200">500 $cDCU unlocks full governance participation</span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-white/3 rounded-lg border border-white/5 group/item hover:bg-white/5 transition-colors min-h-[64px]">
+                  <Users className="text-[#FAFF00] w-5 h-5" />
+                  <span className="text-sm text-gray-200">Organizers earn match for participants in events</span>
+                </div>
+              </div>
+
+              <div className="mt-auto pt-4">
+                <button disabled className="w-full px-6 py-4 bg-neutral-800 text-gray-500 font-bold rounded-2xl cursor-not-allowed opacity-60 text-xs uppercase tracking-widest flex items-center justify-center gap-2">
+                  Governance in Development <Lock className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* $bDCU - Action Token */}
-        <section className="py-16 md:py-24 border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-0">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* $bDCU - Action Token */}
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 relative overflow-hidden group hover:border-blue-500/30 transition-colors">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl group-hover:bg-blue-600/20 transition-all" />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Image src="/images/dcu-token-logo.png" alt="$bDCU" width={48} height={48} className="w-12 h-12 object-contain" unoptimized />
-                    <h2 className="text-2xl font-bebas text-white tracking-wide">$bDCU - Action Token</h2>
+        {/* The Bridge - Visual Flow */}
+        <section className="mb-24">
+          <SectionHeading
+            badge="THE ARCHITECTURE"
+            title="The Impact Bridge"
+            subtitle="Start with easy action. Dive deeper to the network and governance when the time is right."
+          />
+          <div className="max-w-5xl mx-auto p-8 md:p-12 rounded-3xl bg-neutral-900/50 border border-white/10 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
+              backgroundImage: `radial-gradient(circle at 50% 50%, rgba(88, 177, 47, 0.15), transparent 70%)`
+            }} />
+
+            <div className="relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 relative">
+
+                {/* Connector Line (Desktop) */}
+                <div className="hidden lg:block absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-px bg-gradient-to-r from-blue-500/50 via-[#58B12F] to-[#58B12F]/50 z-0">
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2">
+                    <ArrowRight className="text-[#58B12F] w-4 h-4" />
                   </div>
-                  <div className="text-xs text-gray-400 mb-3 space-y-1">
-                    <p><strong className="text-gray-200">Chain:</strong> Base</p>
-                    <p><strong className="text-gray-200">Type:</strong> Liquid ERC-20</p>
-                    <p><strong className="text-gray-200">Total Supply:</strong> 1,000,000,000</p>
-                    <p><strong className="text-gray-200">Circulating:</strong> 850,000,000 (85%)</p>
-                    <p><strong className="text-gray-200">Clanker Vault:</strong> 150,000,000 (15%) - burns, rewards, liquidity</p>
+                </div>
+
+                {/* Left Column - BASE */}
+                <div className="space-y-6 relative z-10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center shrink-0">
+                      <Camera className="text-blue-400 w-7 h-7" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-blue-400 font-bold uppercase tracking-widest block mb-1">Path 01</span>
+                      <h4 className="text-2xl font-bebas text-white uppercase tracking-wider">Action on Base</h4>
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-300 mb-4 leading-relaxed">
-                    $bDCU is earned through action and traded freely. It is the entry point for anyone joining the network - no prior knowledge required, no long-term lock-up needed to get started.
-                  </p>
-                  <p className="text-sm text-gray-300 mb-4 leading-relaxed">
-                    $bDCU launched fairly through Clanker with no pre-mine, no team allocation, and no investor distribution. Every token in circulation was acquired on the open market. No insider had an advantage on day one.
-                  </p>
-                  <p className="text-xs font-medium text-gray-300 mb-2">Allocation:</p>
-                  <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-950/50 mb-4">
-                    <table className="w-full min-w-[260px] border-collapse text-sm">
-                      <thead>
-                        <tr className="border-b border-neutral-700"><th className="text-left py-2 px-3 font-medium text-gray-400">Purpose</th><th className="text-right py-2 px-3 font-medium text-gray-400">Amount</th><th className="text-right py-2 px-3 font-medium text-gray-400">Share</th></tr>
-                      </thead>
-                      <tbody className="text-gray-200">
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Fair launch circulating</td><td className="py-2 px-3 text-right">850,000,000</td><td className="py-2 px-3 text-right">85%</td></tr>
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Clanker Vault</td><td className="py-2 px-3 text-right">150,000,000</td><td className="py-2 px-3 text-right">15%</td></tr>
-                      </tbody>
-                    </table>
+
+                  <div className="space-y-4">
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/5 flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">1</div>
+                      <p className="text-sm text-gray-300">Earn $bDCU via mini app cleanups, streaks, and referrals.</p>
+                    </div>
+                    <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-start gap-3 relative group">
+                      <div className="w-5 h-5 rounded-full bg-blue-600/30 flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">2</div>
+                      <div>
+                        <p className="text-sm text-white font-medium">Bridge: 5 Cleanups → 500 $cDCU</p>
+                        <p className="text-xs text-gray-400 mt-1">Claim your reputation on Celo after verifying impact on Base.</p>
+                      </div>
+                      <div className="absolute -right-3 top-1/2 -translate-y-1/2 lg:hidden">
+                        <ArrowRight className="text-blue-400 w-5 h-5 rotate-90" />
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-xs text-gray-400 mb-4 leading-relaxed">The vault exists for three purposes only: deflationary burns tied to network milestones, ecosystem rewards for verifiers and campaigns, and liquidity stabilization during volatility. The vault cannot be used for team compensation or investor payouts - it is protocol-owned.</p>
-                  <p className="text-xs text-gray-400 mb-1"><strong className="text-gray-200">Earn from:</strong> Mini app cleanups, streaks, referrals.</p>
-                  <p className="text-xs text-gray-400 mb-4"><strong className="text-gray-200">Use for:</strong> Verifier staking, trading on Base DEXes, campaign participation, bridging to $cDCU.</p>
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-[#58B12F] hover:bg-[#58B12F]/80 text-black font-bold rounded-lg text-xs uppercase tracking-wider">Swap ETH / $bDCU</a>
-                    <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2&outputCurrency=0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" rel="noopener noreferrer" className="px-4 py-2 border border-[#58B12F] text-[#58B12F] hover:bg-[#58B12F]/10 font-bold rounded-lg text-xs uppercase tracking-wider">Swap USDT / $bDCU</a>
+                </div>
+
+                {/* Right Column - CELO */}
+                <div className="space-y-6 relative z-10">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-2xl bg-[#58B12F]/20 border border-[#58B12F]/30 flex items-center justify-center shrink-0">
+                      <Trophy className="text-[#58B12F] w-7 h-7" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-[#58B12F] font-bold uppercase tracking-widest block mb-1">Path 02</span>
+                      <h4 className="text-2xl font-bebas text-white uppercase tracking-wider">Action on Celo</h4>
+                    </div>
                   </div>
-                  <a href="https://basescan.org/token/0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-400 hover:text-white transition-colors font-mono break-all">Contract: 0x30171b7014c02229497CdE6745DD3aD821F12b07</a>
+
+                  <div className="space-y-4">
+                    <div className="p-4 rounded-xl bg-[#58B12F]/10 border border-[#58B12F]/20 flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-[#58B12F]/30 flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">1</div>
+                      <p className="text-sm text-white font-medium">Earn $cDCU directly via the full platform.</p>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white/5 border border-white/5 flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">2</div>
+                      <p className="text-sm text-gray-300">Unlock Governance, Verifier Staking, and Hypercerts directly.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* $cDCU - Proof Token */}
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 relative overflow-hidden group hover:border-[#FAFF00]/30 transition-colors">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#58B12F]/10 rounded-full blur-2xl group-hover:bg-[#58B12F]/20 transition-all" />
-                <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Image src="/images/dcu-token-logo.png" alt="$cDCU" width={48} height={48} className="w-12 h-12 object-contain" unoptimized />
-                    <h2 className="text-2xl font-bebas text-white tracking-wide">$cDCU - Proof Token</h2>
+              {/* Bridge Indicator Label */}
+              <div className="mt-12 flex flex-col items-center">
+                <div className="px-4 py-1.5 rounded-full bg-neutral-800 border border-white/10 text-[10px] uppercase font-bold tracking-[0.2em] text-gray-400 flex items-center gap-3">
+                  Base <ArrowRight className="w-3 h-3 text-[#58B12F]" /> Celo Only
+                </div>
+                <p className="text-[11px] text-gray-500 mt-2 font-light italic">Celo activity does not affect Base earnings</p>
+              </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-white/5 grid md:grid-cols-2 gap-8">
+              <div className="p-6 rounded-2xl bg-[#58B12F]/5 border border-[#58B12F]/10 group hover:border-[#58B12F]/30 transition-colors">
+                <h5 className="text-[#58B12F] font-bebas text-lg mb-2 uppercase tracking-wide">Organizer Multiplier</h5>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  Applies on both platforms. A 10-person verified cleanup event counts as 10 cleanup credits, whether organized via Base mini app or Celo full platform.
+                </p>
+              </div>
+              <div className="p-6 rounded-2xl bg-orange-500/5 border border-orange-500/10 opacity-80 group hover:border-orange-500/30 transition-colors">
+                <h5 className="text-orange-400 font-bebas text-lg mb-2 uppercase tracking-wide">Path 03: Burn-to-Earn (Base)</h5>
+                <p className="text-sm text-gray-400 leading-relaxed italic">
+                  Future Base-only path: Burn a fixed dollar-equivalent of $bDCU on Base to mint $cDCU instantly, skipping cleanup accumulation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Impact System - Visual Cards */}
+        <section className="mb-24">
+          <SectionHeading
+            badge="UTILITY"
+            title="Impact Ecosystem"
+            subtitle="The infrastructure powered by our dual-token system."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-8 rounded-3xl bg-neutral-900/50 border border-white/10 hover:border-[#58B12F]/30 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-[#58B12F]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <LayoutGrid className="text-[#58B12F] w-6 h-6" />
+              </div>
+              <h4 className="text-2xl font-bebas text-white mb-3 uppercase tracking-wider">Impact Products</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">Dynamic NFTs that evolve with your history. Build a portable environmental reputation that travels across ecosystems - not locked to any platform.</p>
+            </div>
+            <div className="p-8 rounded-3xl bg-neutral-900/50 border border-white/10 hover:border-[#FAFF00]/30 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-[#FAFF00]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <ShieldCheck className="text-[#FAFF00] w-6 h-6" />
+              </div>
+              <h4 className="text-2xl font-bebas text-white mb-3 uppercase tracking-wider">Verifier Network</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">Stake to join the verification layer. Review submissions and earn rewards. Slashing applies for false approvals, keeping the layer honest.</p>
+            </div>
+            <div className="p-8 rounded-3xl bg-neutral-900/50 border border-white/10 hover:border-[#58B12F]/30 transition-all group">
+              <div className="w-12 h-12 rounded-2xl bg-[#58B12F]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <FileText className="text-[#58B12F] w-6 h-6" />
+              </div>
+              <h4 className="text-2xl font-bebas text-white mb-3 uppercase tracking-wider">Hypercerts</h4>
+              <p className="text-sm text-gray-400 leading-relaxed">Permanent ERC-1155 impact certificates minted every 10 cleanups. Usable for grant applications, ESG reporting, and onchain identity.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Token Lifecycle - Comparison */}
+        <section className="mb-24">
+          <SectionHeading
+            badge="LIFE CYCLE"
+            title="Action vs. Proof"
+            subtitle="Comparing the paths of the two tokens."
+          />
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-neutral-900/20">
+            <div className="grid md:grid-cols-2">
+              {/* bDCU Path */}
+              <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-white/10">
+                <div className="flex flex-col items-center text-center mb-12">
+                  <div className="p-3 bg-blue-600/10 rounded-xl mb-4">
+                    <Zap className="text-blue-400 w-6 h-6" />
                   </div>
-                  <div className="text-xs text-gray-400 mb-3 space-y-1">
-                    <p><strong className="text-gray-200">Chain:</strong> Celo</p>
-                    <p><strong className="text-gray-200">Type:</strong> Reputation - earned through action, not bought</p>
-                    <p><strong className="text-gray-200">Total Supply:</strong> 10,000,000</p>
-                    <p><strong className="text-gray-200">Earned from:</strong> Verified cleanups on Base and full platform</p>
+                  <h4 className="text-2xl font-bebas text-blue-400 uppercase tracking-widest">$bDCU Path (Action)</h4>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-8">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold mb-4 border border-blue-500/20">01</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Earn</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">Via Base mini app cleanups and community streaks.</p>
                   </div>
-                  <p className="text-sm text-gray-300 mb-4 leading-relaxed">
-                    $cDCU cannot be purchased on the open market. It is issued only through verified environmental action. This keeps governance in the hands of people who have actually contributed - not speculators who arrived after the fact.
-                  </p>
-                  <p className="text-xs font-medium text-gray-300 mb-2">Earning rate:</p>
-                  <p className="text-xs text-gray-400 mb-4 leading-relaxed">Every 5 verified cleanups on the Base mini app earns 500 $cDCU on Celo. Organizers receive credits equal to verified participants in their campaign - a 20-person cleanup event counts as 20 verified cleanups toward the organizer&apos;s total.</p>
-                  <p className="text-xs font-medium text-gray-300 mb-2">Governance threshold:</p>
-                  <p className="text-xs text-gray-400 mb-4 leading-relaxed">500 $cDCU unlocks full governance participation - voting on proposals, funding pool allocations, and verification rules.</p>
-                  <p className="text-xs font-medium text-gray-300 mb-2">Allocation:</p>
-                  <div className="overflow-x-auto rounded-xl border border-neutral-800 bg-neutral-950/50 mb-4">
-                    <table className="w-full min-w-[260px] border-collapse text-sm">
-                      <thead>
-                        <tr className="border-b border-neutral-700"><th className="text-left py-2 px-3 font-medium text-gray-400">Purpose</th><th className="text-right py-2 px-3 font-medium text-gray-400">Share</th></tr>
-                      </thead>
-                      <tbody className="text-gray-200">
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Staking and Verifier Rewards</td><td className="py-2 px-3 text-right">35%</td></tr>
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Cleanup Campaign Incentives</td><td className="py-2 px-3 text-right">25%</td></tr>
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Public Distribution (vested)</td><td className="py-2 px-3 text-right">20%</td></tr>
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Team and Development (4-year vest)</td><td className="py-2 px-3 text-right">10%</td></tr>
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Verification Treasury</td><td className="py-2 px-3 text-right">5%</td></tr>
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Community Incentives</td><td className="py-2 px-3 text-right">4%</td></tr>
-                        <tr className="border-b border-neutral-800"><td className="py-2 px-3">Liquidity</td><td className="py-2 px-3 text-right">1%</td></tr>
-                      </tbody>
-                    </table>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold mb-4 border border-blue-500/20">02</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Stake</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">To access verifier roles and earn accuracy rewards.</p>
                   </div>
-                  <p className="text-xs text-gray-400 mb-4 italic">The largest share goes to staking and verification because those roles keep the network trustworthy. Rewarding verifiers well is how you attract quality review, not rubber-stamping.</p>
-                  <button disabled className="inline-block px-6 py-3 bg-neutral-800 text-gray-400 font-semibold rounded-xl cursor-not-allowed opacity-60 text-sm">View Celo dApp <span className="text-gray-500 font-normal">(governance in development)</span></button>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold mb-4 border border-blue-500/20">03</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Trade</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">On Base DEXes for instant liquidity.</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center italic opacity-50">
+                    <div className="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold mb-4 border border-blue-500/20">04</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Burn</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">Future option to upgrade reputation directly.</p>
+                  </div>
+                </div>
+              </div>
+              {/* cDCU Path */}
+              <div className="p-8 md:p-12 bg-[#58B12F]/5">
+                <div className="flex flex-col items-center text-center mb-12">
+                  <div className="p-3 bg-[#58B12F]/10 rounded-xl mb-4">
+                    <ShieldCheck className="text-[#58B12F] w-6 h-6" />
+                  </div>
+                  <h4 className="text-2xl font-bebas text-[#58B12F] uppercase tracking-widest">$cDCU Path (Proof)</h4>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-8">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-10 h-10 rounded-full bg-[#58B12F]/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold text-[#58B12F] mb-4 border border-[#58B12F]/20">01</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Claim</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">After every 5 verified cleanups on Base.</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-10 h-10 rounded-full bg-[#58B12F]/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold text-[#58B12F] mb-4 border border-[#58B12F]/20">02</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Stake</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">For long-term governance and verification power.</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-10 h-10 rounded-full bg-[#58B12F]/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold text-[#58B12F] mb-4 border border-[#58B12F]/20">03</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Build</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">An onchain CV via Impact Products and Hypercerts.</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-10 h-10 rounded-full bg-[#58B12F]/20 flex items-center justify-center shrink-0 text-xs font-mono font-bold text-[#58B12F] mb-4 border border-[#58B12F]/20">04</div>
+                    <p className="text-white font-bold text-sm mb-1 uppercase tracking-tighter">Vote</p>
+                    <p className="text-xs text-gray-400 max-w-[160px]">On Gardens.fund proposals to distribute funding.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* The Bridge */}
-        <section className="py-16 md:py-24 border-t border-white/5">
-          <div className="max-w-3xl mx-auto px-0">
-            <h2 className="text-4xl md:text-5xl font-bebas text-white mb-6 text-center">The Bridge</h2>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              Cleanup activity happens on Base. Governance lives on Celo. The bridge connects both without requiring users to manage complex cross-chain transactions themselves.
-            </p>
-            <p className="text-gray-200 font-semibold mb-2">Current mechanism: Cleanup-count claim.</p>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Complete 5 verified cleanups on the Base mini app. DeCleanup&apos;s backend generates a signed authorization. Visit the Celo dApp, connect your wallet, and claim 500 $cDCU. Simple, fast, no cross-chain gas complexity.
-            </p>
-            <p className="text-gray-200 font-semibold mb-2">Organizer multiplier:</p>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              Organizing a verified campaign event counts toward your cleanup total based on participant count. Run a 10-person cleanup, earn 10 cleanup credits toward your next $cDCU claim.
-            </p>
-            <p className="text-gray-200 font-semibold mb-2">Future mechanism: Burn-to-earn.</p>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              As the network matures and $bDCU reaches meaningful market value, a second bridge path will open. Burn a fixed dollar-equivalent of $bDCU on Base to mint $cDCU on Celo instantly - without needing cleanup count accumulation. The burn ratio will be oracle-priced in USD, not fixed in token amount, so it stays fair regardless of market conditions. Parameters will be set by community vote before launch.
-            </p>
-          </div>
-        </section>
+        {/* Governance Timeline - Visual Vertical */}
+        <section className="mb-24 px-4 md:px-0">
+          <SectionHeading
+            badge="PHASED ROLLOUT"
+            title="Governance Timeline"
+            subtitle="The path to full decentralized funding and ownership."
+          />
+          <div className="max-w-2xl mx-auto space-y-8 relative">
+            {/* Connector Line */}
+            <div className="absolute left-[20px] top-4 bottom-4 w-px bg-white/10" />
 
-        {/* Impact System */}
-        <section className="py-16 md:py-24 border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-0">
-            <h2 className="text-4xl md:text-5xl font-bebas text-white mb-10 text-center">Impact System</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
-                <h3 className="text-xl font-bebas tracking-wide text-white mb-3">Impact Products</h3>
-                <p className="text-sm text-gray-300 leading-relaxed">Dynamic NFTs that evolve with your cleanup history. Each verified action levels up your Impact Product, building a portable environmental reputation that travels across ecosystems - not locked to any single platform.</p>
+            <div className="relative pl-12 group">
+              <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#58B12F]/20 border border-[#58B12F]/40 flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                <CheckCircle className="text-[#58B12F] w-5 h-5" />
               </div>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#FAFF00]/30 transition-colors">
-                <h3 className="text-xl font-bebas tracking-wide text-white mb-3">Verifier System</h3>
-                <p className="text-sm text-gray-300 leading-relaxed">Stake $bDCU or $cDCU to join the verifier network. Verifiers review proof-of-impact submissions and earn rewards for accurate decisions. Slashing applies for false approvals, keeping the verification layer honest.</p>
+              <div className="p-6 rounded-2xl bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 transition-colors group-hover:border-white/20">
+                <span className="text-[#58B12F] font-mono text-xs font-bold block mb-2 uppercase tracking-widest">Q2 2026</span>
+                <h4 className="text-xl font-bebas text-white mb-2 uppercase tracking-wide">Gardens.fund Launch</h4>
+                <p className="text-sm text-gray-400">Community curation live on Celo. First cohorts of verifiers onboarded.</p>
               </div>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
-                <h3 className="text-xl font-bebas tracking-wide text-white mb-3">Hypercerts</h3>
-                <p className="text-sm text-gray-300 leading-relaxed">Minted after every 10 verified cleanups. Each Hypercert is a permanent ERC-1155 impact certificate - usable for grant applications, ESG reporting, and onchain identity. Your cleanup history becomes a credential.</p>
+            </div>
+
+            <div className="relative pl-12 group">
+              <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#FAFF00]/10 border border-[#FAFF00]/20 flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                <Clock className="text-[#FAFF00] w-5 h-5" />
+              </div>
+              <div className="p-6 rounded-2xl bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 transition-colors group-hover:border-white/20">
+                <span className="text-[#FAFF00] font-mono text-xs font-bold block mb-2 uppercase tracking-widest">Q3 2026</span>
+                <h4 className="text-xl font-bebas text-white mb-2 uppercase tracking-wide">First Funding Vote</h4>
+                <p className="text-sm text-gray-400">Active participants vote on the first public allocation from the treasury.</p>
+              </div>
+            </div>
+
+            <div className="relative pl-12 group opacity-60">
+              <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                <Lock className="text-gray-500 w-5 h-5" />
+              </div>
+              <div className="p-6 rounded-2xl bg-neutral-900/80 backdrop-blur-sm border border-neutral-800 transition-colors group-hover:border-white/20">
+                <span className="text-gray-500 font-mono text-xs font-bold block mb-2 uppercase tracking-widest">Q4 2026</span>
+                <h4 className="text-xl font-bebas text-white mb-2 uppercase tracking-wide">Full DAO Launch</h4>
+                <p className="text-sm text-gray-400">Complete $cDCU-weighted voting on protocol and parameters.</p>
               </div>
             </div>
           </div>
+          <p className="text-center mt-12 text-sm text-gray-500 italic">
+            Building counts. Those earning $cDCU reputation now will have the strongest voice at launch.
+          </p>
         </section>
 
-        {/* Token Lifecycle */}
-        <section className="py-16 md:py-24 border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-0">
-            <h2 className="text-4xl md:text-5xl font-bebas text-white mb-10 text-center">Token Lifecycle</h2>
-            <div className="overflow-x-auto rounded-2xl border border-neutral-800 bg-neutral-900/50">
-              <table className="w-full min-w-[500px] border-collapse">
-                <thead>
-                  <tr className="border-b border-neutral-700">
-                    <th className="text-left py-4 px-6 text-lg font-medium text-[#58B12F]">$bDCU Path</th>
-                    <th className="text-left py-4 px-6 text-lg font-medium text-[#FAFF00]">$cDCU Path</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-200">
-                  <tr className="border-b border-neutral-800"><td className="py-4 px-6">Earn via Base mini app</td><td className="py-4 px-6">Earn via 5 verified cleanups</td></tr>
-                  <tr className="border-b border-neutral-800"><td className="py-4 px-6">Stake for verifier access</td><td className="py-4 px-6">Stake for governance and verification</td></tr>
-                  <tr className="border-b border-neutral-800"><td className="py-4 px-6">Trade on Base DEXes</td><td className="py-4 px-6">Build Impact Product reputation</td></tr>
-                  <tr className="border-b border-neutral-800"><td className="py-4 px-6">Burn to earn $cDCU (future)</td><td className="py-4 px-6">Vote on Gardens.fund proposals</td></tr>
-                </tbody>
-              </table>
+        {/* Closing - Litepaper style */}
+        <section className="text-center py-20 border-t border-white/5">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-3xl md:text-5xl font-bebas text-white mb-6 uppercase tracking-tight">Built for Proof. <span className="text-[#58B12F]">Scaled for Impact.</span></h3>
+            <p className="text-lg md:text-xl text-gray-400 font-light italic mb-10">
+              "Every cleanup becomes a verified onchain action. Every actor becomes part of a global coordination network."
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/litepaper" className="px-8 py-4 bg-[#FAFF00] text-black font-bold rounded-2xl hover:bg-[#FAFF00]/90 transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2">
+                Read Litepaper <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link href="/" className="px-8 py-4 bg-transparent border border-white/20 text-white font-bold rounded-2xl hover:bg-white/5 transition-all text-xs uppercase tracking-widest">
+                Back to Home
+              </Link>
             </div>
           </div>
         </section>
+      </main>
 
-        {/* Governance Timeline */}
-        <section className="py-16 md:py-24 border-t border-white/5">
-          <div className="max-w-2xl mx-auto px-0">
-            <h2 className="text-4xl md:text-5xl font-bebas text-white mb-6 text-center">Governance Timeline</h2>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              Governance is in development. Here is where it stands:
-            </p>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-4 bg-neutral-900 border border-neutral-800 rounded-xl p-4">
-                <span className="text-[#58B12F] font-mono font-bold shrink-0">Q2 2026</span>
-                <p className="text-sm text-gray-200">Gardens.fund community live on Celo.</p>
-              </div>
-              <div className="flex items-start gap-4 bg-neutral-900 border border-neutral-800 rounded-xl p-4">
-                <span className="text-[#58B12F] font-mono font-bold shrink-0">Q3 2026</span>
-                <p className="text-sm text-gray-200">First community vote on funding pool allocation.</p>
-              </div>
-              <div className="flex items-start gap-4 bg-neutral-900 border border-neutral-800 rounded-xl p-4">
-                <span className="text-[#58B12F] font-mono font-bold shrink-0">Q4 2026</span>
-                <p className="text-sm text-gray-200">Full $cDCU governance launch.</p>
-              </div>
+      {/* Footer */}
+      <footer className="bg-black border-t border-neutral-900 pt-16 pb-8">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-2">
+              <Image src="/images/decleanup_logo_full.png" alt="DeCleanup Network" width={32} height={32} className="h-8 w-auto object-contain" />
             </div>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              Active coordinators and verifiers building their $cDCU holdings now will have the strongest voice when governance opens.
-            </p>
+            <p className="text-[10px] text-gray-500 uppercase font-mono tracking-widest">2026 © DeCleanup Network. Open Infrastructure.</p>
           </div>
-        </section>
-
-        {/* Closing */}
-        <section className="py-16 md:py-24 border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-0 text-center">
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto italic">
-              Built for a transparent global impact economy - where every cleanup becomes verified onchain action.
-            </p>
-          </div>
-        </section>
-      </div>
+        </div>
+      </footer>
     </div>
   );
 }
