@@ -28,7 +28,6 @@ import {
 } from "lucide-react";
 import LitepaperNav from "@/components/LitepaperNav/LitepaperNav";
 import SubPageNav from "@/components/SubPageNav";
-import StartCleaningChoice from "@/components/StartCleaningChoice/StartCleaningChoice";
 import TheoryOfChange from "@/components/TheoryOfChange/TheoryOfChange";
 import LitepaperWhyPillarCards from "@/components/LitepaperWhyPillarCards/LitepaperWhyPillarCards";
 
