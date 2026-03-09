@@ -2,39 +2,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+import SubPageNav from "@/components/SubPageNav";
 
 export const metadata: Metadata = {
     title: "Fund Verified Impact | DeCleanup Rewards",
     description:
-        "Verifiable impact infrastructure, not speculation. Fund what you can verify.",
+        "Verifiable impact infrastructure. Fund local cleanup actions that produce global proof.",
 };
 
 export default function FundersPage() {
     return (
         <main className="min-h-screen bg-black text-white font-sans selection:bg-[#58B12F] selection:text-black">
-            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-                {/* Back Button */}
-                <div className="mb-8">
-                    <Link
-                        href="/#who-is-this-for"
-                        className="inline-flex items-center gap-2 text-[#58B12F] hover:text-[#58B12F]/80 font-semibold text-sm md:text-base transition-colors duration-200 group"
-                    >
-                        <svg
-                            className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform duration-200"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                        <span>Back to Home</span>
-                    </Link>
-                </div>
+            <SubPageNav />
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:py-16">
 
                 {/* Page Header */}
                 <div className="text-center mb-12 md:mb-16">

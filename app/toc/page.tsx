@@ -33,6 +33,7 @@ import {
   Clock,
   Target,
 } from "lucide-react";
+import SubPageNav from "@/components/SubPageNav";
 
 /* ─── Tiny inline SVG checkmark for lists ─── */
 function CheckMark({ green = true }: { green?: boolean }) {
@@ -92,22 +93,14 @@ function Card({
 export const metadata: Metadata = {
   title: "Theory of Change — DeCleanup Network",
   description:
-    "Why cleanup action stays invisible — and how we fix it. DeCleanup Network Theory of Change v2.2.",
+    "Why cleanup action stays invisible and how we fix it by converting local efforts into global proof. v2.2.",
 };
 
 export default function TocPage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white font-sans selection:bg-[#58B12F] selection:text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-
-        {/* ─── Back link ─── */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-[#58B12F] hover:text-[#58B12F]/70 font-semibold text-sm transition-colors group mb-12"
-        >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Back to Home
-        </Link>
+      <SubPageNav />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pb-16">
 
         {/* ─── Hero ─── */}
         <div className="text-center mb-16 md:mb-24">
