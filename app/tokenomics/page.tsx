@@ -3,9 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import {
-  ArrowLeft,
   Coins,
-  Shield,
   ArrowRight,
   Zap,
   Lock,
@@ -13,32 +11,12 @@ import {
   Flame,
   Trophy,
   ArrowUpRight,
-  TrendingUp,
-  LineChart,
-  BarChart3,
-  Calendar,
-  GanttChartSquare,
-  Network,
-  Milestone,
   CheckCircle,
   Clock,
   LayoutGrid,
-  Heart,
-  Globe,
-  Star,
   ShieldCheck,
-  Smartphone,
-  Layers,
-  MapPin,
   FileText,
-  MessageCircle,
-  Wand2,
-  Wallet,
   Camera,
-  Scan,
-  Link as LinkIcon,
-  Menu,
-  X
 } from "lucide-react";
 import SubPageNav from "@/components/SubPageNav";
 
@@ -514,7 +492,7 @@ export default function TokenomicsPage() {
           <div className="max-w-4xl mx-auto">
             <h3 className="text-3xl md:text-5xl font-bebas text-white mb-6 uppercase tracking-tight">Built for Proof. <span className="text-[#58B12F]">Scaled for Impact.</span></h3>
             <p className="text-lg md:text-xl text-gray-400 font-light italic mb-10">
-              "Every cleanup becomes a verified onchain action. Every actor becomes part of a global coordination network."
+              &quot;Every cleanup becomes a verified onchain action. Every actor becomes part of a global coordination network.&quot;
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/litepaper" className="px-8 py-4 bg-[#FAFF00] text-black font-bold rounded-2xl hover:bg-[#FAFF00]/90 transition-all text-xs uppercase tracking-widest flex items-center justify-center gap-2">

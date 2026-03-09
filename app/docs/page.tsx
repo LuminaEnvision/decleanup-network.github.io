@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import SubPageNav from "@/components/SubPageNav";
 
 export const metadata: Metadata = {
