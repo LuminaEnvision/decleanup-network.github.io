@@ -1,4 +1,4 @@
-import LegalSection, { LegalH3, LegalList } from "./LegalSection";
+import LegalSection, { LegalH3, LegalList, LegalNote } from "./LegalSection";
 
 export default function GeneralTerms() {
   return (
