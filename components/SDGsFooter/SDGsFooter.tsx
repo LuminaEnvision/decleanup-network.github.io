@@ -40,10 +40,10 @@ const sdgs = [
 
 export default function SDGsFooter() {
   return (
-    <section className="w-full py-12 md:py-16 bg-black border-t border-gray-800">
+    <section className="w-full py-12 md:py-16 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-center text-3xl font-normal uppercase leading-tight text-white mb-6 md:text-4xl lg:text-5xl"
+          className="text-center text-3xl font-normal uppercase leading-tight text-black dark:text-white mb-6 md:text-4xl lg:text-5xl"
           style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
         >
           Aligned with the United Nations Sustainable Development Goals
@@ -55,7 +55,7 @@ export default function SDGsFooter() {
               href={goal.href}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="flex-shrink-0 rounded-lg border border-white/10 bg-white/5 p-1 transition hover:border-[#58B12F]/40 hover:bg-white/10"
+              className="flex-shrink-0 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 p-1 transition hover:border-[#58B12F]/40 hover:bg-black/10 dark:hover:bg-white/10"
               title={`SDG ${goal.num}`}
             >
               <Image
@@ -69,7 +69,7 @@ export default function SDGsFooter() {
             </a>
           ))}
         </div>
-        <p className="mt-6 text-center text-xs text-gray-300 max-w-2xl mx-auto">
+        <p className="mt-6 text-center text-xs text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
           <a
             href="https://www.un.org/sustainabledevelopment"
             target="_blank"

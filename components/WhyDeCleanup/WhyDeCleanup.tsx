@@ -3,7 +3,7 @@ import React from "react";
 
 export default function WhyDeCleanup() {
   return (
-    <section className="relative overflow-hidden border-t border-white/10 bg-black py-16 md:py-24">
+    <section className="relative overflow-hidden border-t border-black/10 dark:border-white/10 bg-white dark:bg-black py-16 md:py-24">
       {/* Subtle brand tint */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#58B12F]/[0.03] to-transparent pointer-events-none" />
 
@@ -11,7 +11,7 @@ export default function WhyDeCleanup() {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2
-            className="mb-6 text-3xl font-normal uppercase leading-tight text-gray-200 md:text-4xl lg:text-5xl"
+            className="mb-6 text-3xl font-normal uppercase leading-tight text-gray-800 dark:text-gray-200 md:text-4xl lg:text-5xl"
             style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
           >
             Why DeCleanup Exists
@@ -21,14 +21,14 @@ export default function WhyDeCleanup() {
           <div className="max-w-4xl mx-auto mb-12">
             <div className="grid md:grid-cols-3 gap-4 items-center">
               {/* Problem */}
-              <div className="group relative p-6 rounded-2xl bg-white/[0.04] border border-white/10 transition-all duration-300 hover:border-white/20">
-                <div className="text-gray-300 mb-3 flex justify-center">
+              <div className="group relative p-6 rounded-2xl bg-white/[0.04] border border-black/10 dark:border-white/10 transition-all duration-300 hover:border-black/20 dark:hover:border-white/20">
+                <div className="text-gray-700 dark:text-gray-300 mb-3 flex justify-center">
                   <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
-                <h3 className="text-gray-300 font-semibold text-lg mb-2">The Problem</h3>
-                <p className="text-gray-300 text-sm">Cleanups happen, but there&apos;s no credible proof or transparent coordination</p>
+                <h3 className="text-gray-700 dark:text-gray-300 font-semibold text-lg mb-2">The Problem</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">Cleanups happen, but there&apos;s no credible proof or transparent coordination</p>
               </div>
 
               {/* Arrow */}
@@ -45,8 +45,8 @@ export default function WhyDeCleanup() {
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-gray-200 font-semibold text-lg mb-2">The Solution</h3>
-                <p className="text-gray-300 text-sm">Verifiable, incentivized, and transparently funded environmental action</p>
+                <h3 className="text-gray-800 dark:text-gray-200 font-semibold text-lg mb-2">The Solution</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">Verifiable, incentivized, and transparently funded environmental action</p>
               </div>
             </div>
           </div>

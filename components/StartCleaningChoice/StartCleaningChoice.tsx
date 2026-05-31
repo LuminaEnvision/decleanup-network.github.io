@@ -68,13 +68,13 @@ export default function StartCleaningChoice({ variant = "default" }: { variant?:
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-6">
-              <h2 id="start-cleaning-title" className="text-xl font-bold text-white">
+              <h2 id="start-cleaning-title" className="text-xl font-bold text-black dark:text-white">
                 {isLitepaper ? "Launch app" : "Where do you want to start?"}
               </h2>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="rounded-lg p-1.5 text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
+                className="rounded-lg p-1.5 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
                 aria-label="Close"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -88,7 +88,7 @@ export default function StartCleaningChoice({ variant = "default" }: { variant?:
                 href={LINKS.farcaster}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-xl border border-[#58B12F]/30 bg-white/5 px-4 py-3.5 text-left text-white font-medium hover:border-[#58B12F]/60 hover:bg-white/10 transition-colors"
+                className="block w-full rounded-xl border border-[#58B12F]/30 bg-black/5 dark:bg-white/5 px-4 py-3.5 text-left text-black dark:text-white font-medium hover:border-[#58B12F]/60 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
               >
                 Mini app on Farcaster
               </a>
@@ -96,7 +96,7 @@ export default function StartCleaningChoice({ variant = "default" }: { variant?:
                 href={LINKS.base}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-xl border border-[#58B12F]/30 bg-white/5 px-4 py-3.5 text-left text-white font-medium hover:border-[#58B12F]/60 hover:bg-white/10 transition-colors"
+                className="block w-full rounded-xl border border-[#58B12F]/30 bg-black/5 dark:bg-white/5 px-4 py-3.5 text-left text-black dark:text-white font-medium hover:border-[#58B12F]/60 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
               >
                 Mini app on Base app
               </a>
@@ -104,13 +104,13 @@ export default function StartCleaningChoice({ variant = "default" }: { variant?:
                 href={LINKS.full}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-xl border border-[#58B12F]/30 bg-white/5 px-4 py-3.5 text-left text-white font-medium hover:border-[#58B12F]/60 hover:bg-white/10 transition-colors"
+                className="block w-full rounded-xl border border-[#58B12F]/30 bg-black/5 dark:bg-white/5 px-4 py-3.5 text-left text-black dark:text-white font-medium hover:border-[#58B12F]/60 hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
               >
                 {isLitepaper ? "Full platform on Celo (testing phase)" : "Full platform"}
               </a>
             </div>
 
-            <p className="mt-4 text-xs text-gray-400 text-center">
+            <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 text-center">
               Opens in a new tab
             </p>
           </div>

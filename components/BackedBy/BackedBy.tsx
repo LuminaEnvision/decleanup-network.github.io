@@ -29,7 +29,7 @@ const backers = [
     src: "/images/backers/octant.png",
     href: "https://octant.app",
     // PNG transparent. Invert turns Black Content -> White Content.
-    // Wrapper bg-black handles the transparency.
+    // Wrapper bg-white dark:bg-black handles the transparency.
     className: "invert",
     logoScale: "scale-100"
   },
@@ -37,10 +37,10 @@ const backers = [
 
 export default function BackedBy() {
   return (
-    <section className="w-full py-16 md:py-24 bg-black border-t border-gray-800">
+    <section className="w-full py-16 md:py-24 bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
-          className="text-3xl font-normal uppercase leading-tight text-white mb-10 md:mb-12 text-center md:text-4xl lg:text-5xl"
+          className="text-3xl font-normal uppercase leading-tight text-black dark:text-white mb-10 md:mb-12 text-center md:text-4xl lg:text-5xl"
           style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
         >
           Backed by
@@ -57,7 +57,7 @@ export default function BackedBy() {
               {/* Gradient Container */}
               <div className="relative flex h-24 w-24 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-[#58B12F] via-[#FAFF00] to-[#58B12F] animate-pulse">
                 {/* Mask Container: High Contrast Mask (Black hides, White reveals) */}
-                <div className="relative h-full w-full bg-black mix-blend-multiply">
+                <div className="relative h-full w-full bg-white dark:bg-black mix-blend-multiply">
                   <Image
                     src={backer.src}
                     alt={`${backer.name} logo`}
@@ -67,7 +67,7 @@ export default function BackedBy() {
                   />
                 </div>
               </div>
-              <span className="text-center text-sm font-medium text-gray-200 transition-colors duration-300 group-hover:text-[#FAFF00] group-hover:font-bold">
+              <span className="text-center text-sm font-medium text-gray-800 dark:text-gray-200 transition-colors duration-300 group-hover:text-[#FAFF00] group-hover:font-bold">
                 {backer.name}
               </span>
             </a>

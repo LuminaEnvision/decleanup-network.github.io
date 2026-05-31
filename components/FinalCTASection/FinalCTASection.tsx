@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function FinalCTASection() {
   return (
-    <section className="w-full py-20 md:py-28 bg-gradient-to-b from-[#58B12F]/10 to-black border-t border-white/5">
+    <section className="w-full py-20 md:py-28 bg-gradient-to-b from-[#58B12F]/10 to-black border-t border-black/5 dark:border-white/5">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl md:text-5xl font-bebas text-white mb-4 tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-bebas text-black dark:text-white mb-4 tracking-wide">
           Ready to Make Your Impact Count?
         </h2>
-        <p className="text-gray-400 text-lg mb-10">
+        <p className="text-gray-600 dark:text-gray-400 text-lg mb-10">
           Join volunteers worldwide turning cleanup action into on-chain proof.
         </p>
         <Link

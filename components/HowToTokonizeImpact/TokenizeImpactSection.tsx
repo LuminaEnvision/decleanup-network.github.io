@@ -13,17 +13,17 @@ const CLEANUP_IMAGE = "/images/impact_verification.png";
 
 const TokenizeImpactSection = () => {
   return (
-    <div className="w-full py-16 md:py-24 overflow-hidden bg-black">
+    <div className="w-full py-16 md:py-24 overflow-hidden bg-white dark:bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header - increased spacing */}
         <div className="mb-12 text-center md:mb-16">
           <h2
-            className="mb-4 text-3xl font-normal uppercase leading-tight text-white md:text-4xl lg:text-5xl"
+            className="mb-4 text-3xl font-normal uppercase leading-tight text-black dark:text-white md:text-4xl lg:text-5xl"
             style={{ fontFamily: "var(--font-bebas-neue), sans-serif" }}
           >
             How Your Cleanup Becomes Verified Impact
           </h2>
-          <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base max-w-xl mx-auto">
             Four simple steps from picking up litter to earning recognition.
           </p>
         </div>
@@ -32,9 +32,9 @@ const TokenizeImpactSection = () => {
         <div className="flex flex-col gap-10 md:flex-row md:gap-12 lg:gap-16 items-stretch">
           {/* Left: Card with cleanup photo + floating verification badge */}
           <div className="w-full min-w-0 md:w-1/2 shrink-0">
-            <div className="relative rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 transition-all duration-300 hover:border-[#58B12F]/30 hover:shadow-[0_0_30px_rgba(88,177,47,0.1)]">
+            <div className="relative rounded-2xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 p-4 sm:p-6 transition-all duration-300 hover:border-[#58B12F]/30 hover:shadow-[0_0_30px_rgba(88,177,47,0.1)]">
               {/* Floating badge: Photo Verified */}
-              <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-full border border-white/10 bg-black/90 px-3 py-1.5 text-xs text-white shadow-lg animate-pulse" style={{ animationDuration: "2.5s" }}>
+              <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-full border border-black/10 dark:border-white/10 bg-black/90 px-3 py-1.5 text-xs text-black dark:text-white shadow-lg animate-pulse" style={{ animationDuration: "2.5s" }}>
                 <span aria-hidden>✔</span>
                 <span>Photo Verified</span>
               </div>
@@ -60,14 +60,14 @@ const TokenizeImpactSection = () => {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="w-full min-w-0 rounded-2xl border border-gray-800 bg-gray-900/80 p-4 sm:p-6 transition-all duration-300 hover:border-[#58B12F]/30 hover:shadow-[0_0_20px_rgba(88,177,47,0.08)]"
+                className="w-full min-w-0 rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-900/80 p-4 sm:p-6 transition-all duration-300 hover:border-[#58B12F]/30 hover:shadow-[0_0_20px_rgba(88,177,47,0.08)]"
               >
                 <div className="flex items-center gap-4">
                   <div className="text-2xl font-semibold text-[#FAFF00] md:text-3xl" style={{ fontWeight: 500 }}>
                     {step.number}
                   </div>
                   <h3
-                    className="text-lg font-medium uppercase tracking-wide text-white md:text-xl"
+                    className="text-lg font-medium uppercase tracking-wide text-black dark:text-white md:text-xl"
                     style={{ fontFamily: "var(--font-bebas-neue), sans-serif", fontWeight: 500 }}
                   >
                     {step.title}

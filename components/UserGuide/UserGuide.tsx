@@ -218,15 +218,15 @@ const UserGuide = () => {
   return (
     <section
       id="user-guide"
-      className="w-full bg-black text-white py-10 md:py-16"
+      className="w-full bg-white dark:bg-black text-black dark:text-white py-10 md:py-16"
     >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* SECTION TITLE */}
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-white mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal uppercase text-black dark:text-white mb-4">
             USER GUIDE
           </h1>
-          <p className="text-lg md:text-xl text-gray-300">
+          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300">
             DeCleanup Mini app - a simple flow to start using DeCleanup rewards
             today.
           </p>
@@ -236,12 +236,12 @@ const UserGuide = () => {
         <section className="mb-12 md:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 
-            <div className="bg-[#0A0A0A] border-l-4 border-[#FAFF00] rounded-xl p-6 lg:p-8 flex flex-col h-full hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(250,255,0,0.2)]">
+            <div className="bg-[#f8f9fa] dark:bg-[#0A0A0A] border-l-4 border-[#FAFF00] rounded-xl p-6 lg:p-8 flex flex-col h-full hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(250,255,0,0.2)]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-[#FAFF00] to-[#58B12F] rounded-lg flex items-center justify-center shrink-0">
                   <FarcasterIcon className="w-6 h-6 text-black" />
                 </div>
-                <h2 className="text-xl md:text-2xl font-semibold text-white">
+                <h2 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
                   Use on Farcaster
                 </h2>
               </div>
@@ -258,19 +258,19 @@ const UserGuide = () => {
               >
                 Open on Farcaster
               </a>
-              <p className="text-gray-300 text-base leading-relaxed mb-6">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-6">
                 Use the DeCleanup Mini App directly inside Farcaster. Smooth,
                 instant, easy wallet connect
               </p>
               <div className="mt-auto">
-                <p className="text-sm text-gray-200 mb-2">Wallets:</p>
+                <p className="text-sm text-gray-800 dark:text-gray-200 mb-2">Wallets:</p>
                 <ul className="space-y-1 mb-3">
-                  <li className="text-gray-300 text-sm flex items-center">
+                  <li className="text-gray-700 dark:text-gray-300 text-sm flex items-center">
                     <span className="text-[#FAFF00] mr-2">•</span>
                     Farcaster Wallet is preferable...
                   </li>
                 </ul>
-                <p className="text-xs text-gray-300 italic">
+                <p className="text-xs text-gray-700 dark:text-gray-300 italic">
                   Note: currently other wallet work unstable in farcaster app,
                   use native wallet for best experience
                 </p>
@@ -278,12 +278,12 @@ const UserGuide = () => {
             </div>
 
 
-            <div className="bg-[#0A0A0A] border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col h-full hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(88,177,47,0.2)]">
+            <div className="bg-[#f8f9fa] dark:bg-[#0A0A0A] border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col h-full hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_30px_rgba(88,177,47,0.2)]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center shrink-0">
-                  <GlobeIcon className="w-6 h-6 text-white" />
+                  <GlobeIcon className="w-6 h-6 text-black dark:text-white" />
                 </div>
-                <h2 className="text-xl md:text-2xl font-semibold text-white">
+                <h2 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
                   Use on Web
                 </h2>
               </div>
@@ -300,26 +300,26 @@ const UserGuide = () => {
               >
                 Open Web App
               </a>
-              <p className="text-gray-300 text-base leading-relaxed mb-6">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-6">
                 Open the same Mini App in a browser on mobile or desktop and
                 connect any Base-compatible wallet.
               </p>
               <div className="mt-auto">
-                <p className="text-sm text-gray-200 mb-2">Wallets:</p>
+                <p className="text-sm text-gray-800 dark:text-gray-200 mb-2">Wallets:</p>
                 <ul className="space-y-1">
-                  <li className="text-gray-300 text-sm flex items-center">
+                  <li className="text-gray-700 dark:text-gray-300 text-sm flex items-center">
                     <span className="text-[#58B12F] mr-2">•</span>
                     Rainbow
                   </li>
-                  <li className="text-gray-300 text-sm flex items-center">
+                  <li className="text-gray-700 dark:text-gray-300 text-sm flex items-center">
                     <span className="text-[#58B12F] mr-2">•</span>
                     Base account
                   </li>
-                  <li className="text-gray-300 text-sm flex items-center">
+                  <li className="text-gray-700 dark:text-gray-300 text-sm flex items-center">
                     <span className="text-[#58B12F] mr-2">•</span>
                     Metamask
                   </li>
-                  <li className="text-gray-300 text-sm flex items-center">
+                  <li className="text-gray-700 dark:text-gray-300 text-sm flex items-center">
                     <span className="text-[#58B12F] mr-2">•</span>
                     Wallet Connect
                   </li>
@@ -331,19 +331,19 @@ const UserGuide = () => {
 
         {/* SECTION 2 - HOW IT WORKS (3-STEP FLOW) */}
         <section className="mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-normal uppercase text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-normal uppercase text-black dark:text-white mb-8 text-center">
             How It Works
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* Step 1 */}
             <div className="bg-gray-900 border-t-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col h-full hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <TrashIcon className="w-8 h-8 text-white" />
+                <TrashIcon className="w-8 h-8 text-black dark:text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 text-center">
+              <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3 text-center">
                 Clean Up
               </h3>
-              <p className="text-gray-300 text-base leading-relaxed text-center">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed text-center">
                 Find a polluted spot and remove the trash.
               </p>
             </div>
@@ -353,10 +353,10 @@ const UserGuide = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-[#FAFF00] to-[#58B12F] rounded-lg flex items-center justify-center mb-4 mx-auto">
                 <CameraIcon className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 text-center">
+              <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3 text-center">
                 Snap Proof
               </h3>
-              <p className="text-gray-300 text-base leading-relaxed text-center">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed text-center">
                 Take before & after photos with location enabled.
               </p>
             </div>
@@ -364,12 +364,12 @@ const UserGuide = () => {
             {/* Step 3 */}
             <div className="bg-gray-900 border-t-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col h-full hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <CheckIcon className="w-8 h-8 text-white" />
+                <CheckIcon className="w-8 h-8 text-black dark:text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 text-center">
+              <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3 text-center">
                 Submit & Earn
               </h3>
-              <p className="text-gray-300 text-base leading-relaxed text-center">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed text-center">
                 Upload proof, get verified, earn rewards.
               </p>
             </div>
@@ -378,19 +378,19 @@ const UserGuide = () => {
 
         {/* SECTION 3 - REWARDS OVERVIEW (2 FEATURE CARDS) */}
         <section className="mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-normal uppercase text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-normal uppercase text-black dark:text-white mb-8 text-center">
             Rewards Overview
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {/* Card A - Impact Product */}
             <div className="bg-gray-900 border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col h-full hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300 hover:-translate-y-1">
               <div className="w-14 h-14 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center mb-4">
-                <TargetIcon className="w-7 h-7 text-white" />
+                <TargetIcon className="w-7 h-7 text-black dark:text-white" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
+              <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3">
                 Impact Product
               </h3>
-              <p className="text-gray-300 text-base leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed">
                 Your permanent, evolving environmental profile.
               </p>
             </div>
@@ -400,15 +400,15 @@ const UserGuide = () => {
               <div className="w-14 h-14 bg-gradient-to-br from-[#FAFF00] to-[#58B12F] rounded-lg flex items-center justify-center mb-4">
                 <CoinIcon className="w-7 h-7 text-black" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
+              <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white mb-3">
                 $bDCU Rewards
               </h3>
-              <p className="text-gray-300 text-base leading-relaxed mb-4">
+              <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed mb-4">
                 Earn $bDCU for every approved cleanup, streaks, referrals and
                 submitting Impact Reports in the Mini App.
               </p>
-              <div className="mt-auto flex flex-wrap gap-2 pt-2 border-t border-white/10 uppercase text-[10px] font-bold">
-                <span className="text-gray-400 w-full mb-1">Direct Swap:</span>
+              <div className="mt-auto flex flex-wrap gap-2 pt-2 border-t border-black/10 dark:border-white/10 uppercase text-[10px] font-bold">
+                <span className="text-gray-600 dark:text-gray-400 w-full mb-1">Direct Swap:</span>
                 <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" className="text-[#58B12F] hover:text-[#FAFF00] transition-colors underline">ETH / $bDCU</a>
                 <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2&outputCurrency=0x30171b7014c02229497CdE6745DD3aD821F12b07" target="_blank" className="text-[#58B12F] hover:text-[#FAFF00] transition-colors underline">USDT / $bDCU</a>
               </div>
@@ -418,7 +418,7 @@ const UserGuide = () => {
 
         {/* SECTION 4 - REWARDS BREAKDOWN */}
         <section className="mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-normal uppercase text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-normal uppercase text-black dark:text-white mb-8 text-center">
             Rewards Breakdown
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-6">
@@ -426,13 +426,13 @@ const UserGuide = () => {
             <div className="bg-gray-900 border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center shrink-0">
-                  <TrashIcon className="w-5 h-5 text-white" />
+                  <TrashIcon className="w-5 h-5 text-black dark:text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
                   Cleanups
                 </h3>
               </div>
-              <p className="text-gray-200 text-sm mb-3">
+              <p className="text-gray-800 dark:text-gray-200 text-sm mb-3">
                 Claims of Impact Product
               </p>
               <p className="text-[#58B12F] text-2xl md:text-3xl font-bold">
@@ -446,11 +446,11 @@ const UserGuide = () => {
                 <div className="w-10 h-10 bg-gradient-to-br from-[#FAFF00] to-[#58B12F] rounded-lg flex items-center justify-center shrink-0">
                   <ShareIcon className="w-5 h-5 text-black" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
                   Referrals
                 </h3>
               </div>
-              <p className="text-gray-200 text-sm mb-3">
+              <p className="text-gray-800 dark:text-gray-200 text-sm mb-3">
                 Rewards for referring new users
               </p>
               <p className="text-[#FAFF00] text-2xl md:text-3xl font-bold">
@@ -462,13 +462,13 @@ const UserGuide = () => {
             <div className="bg-gray-900 border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center shrink-0">
-                  <FlameIcon className="w-5 h-5 text-white" />
+                  <FlameIcon className="w-5 h-5 text-black dark:text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
                   Streak
                 </h3>
               </div>
-              <p className="text-gray-200 text-sm mb-3">
+              <p className="text-gray-800 dark:text-gray-200 text-sm mb-3">
                 Weekly streak maintenance rewards
               </p>
               <p className="text-[#58B12F] text-2xl md:text-3xl font-bold">
@@ -482,11 +482,11 @@ const UserGuide = () => {
                 <div className="w-10 h-10 bg-gradient-to-br from-[#FAFF00] to-[#58B12F] rounded-lg flex items-center justify-center shrink-0">
                   <DocumentIcon className="w-5 h-5 text-black" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
                   Impact Reports
                 </h3>
               </div>
-              <p className="text-gray-200 text-sm mb-3">
+              <p className="text-gray-800 dark:text-gray-200 text-sm mb-3">
                 Submission of impact reports
               </p>
               <p className="text-[#FAFF00] text-2xl md:text-3xl font-bold">
@@ -498,13 +498,13 @@ const UserGuide = () => {
             <div className="bg-gray-900 border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center shrink-0">
-                  <VerifiedIcon className="w-5 h-5 text-white" />
+                  <VerifiedIcon className="w-5 h-5 text-black dark:text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                <h3 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
                   Verifier Reward
                 </h3>
               </div>
-              <p className="text-gray-200 text-sm mb-3">
+              <p className="text-gray-800 dark:text-gray-200 text-sm mb-3">
                 Verifier reward for valid submission verification
               </p>
               <p className="text-[#58B12F] text-2xl md:text-3xl font-bold">
@@ -513,7 +513,7 @@ const UserGuide = () => {
             </div>
           </div>
           <div className="text-center">
-            <p className="text-sm text-gray-300 italic">
+            <p className="text-sm text-gray-700 dark:text-gray-300 italic">
               Note: Rewards are subject to change upon the actual token price.
             </p>
           </div>
@@ -521,29 +521,29 @@ const UserGuide = () => {
 
         {/* SECTION 5 - VERIFICATION SYSTEM (SPLIT LAYOUT) */}
         <section className="mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-normal uppercase text-white mb-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-normal uppercase text-black dark:text-white mb-8 text-center">
             Verification System
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {/* LEFT SIDE - Text block */}
             <div className="flex flex-col justify-center">
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+              <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-4">
                 Your cleanup will be reviewed by community verifiers, who are
                 $bDCU stakers. If the submission has geolocation, photos are
                 clear and authentic, it gets approved. If not, it&apos;s
                 rejected.
               </p>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
                 Submitting Impact Report helps to validate submissions and
                 builds your profile.
               </p>
             </div>
 
             {/* RIGHT SIDE - Illustration with icon */}
-            <div className="bg-[#0A0A0A] border-2 border-[#58B12F] rounded-xl p-8 flex items-center justify-center aspect-video hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300">
+            <div className="bg-[#f8f9fa] dark:bg-[#0A0A0A] border-2 border-[#58B12F] rounded-xl p-8 flex items-center justify-center aspect-video hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300">
               <div className="w-full h-full bg-gradient-to-br from-[#58B12F]/20 to-[#FAFF00]/20 rounded-lg flex items-center justify-center">
                 <div className="w-24 h-24 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-full flex items-center justify-center">
-                  <SearchIcon className="w-12 h-12 text-white" />
+                  <SearchIcon className="w-12 h-12 text-black dark:text-white" />
                 </div>
               </div>
             </div>
@@ -553,21 +553,21 @@ const UserGuide = () => {
         {/* SECTION 6 - CELO FULL APP COMING SOON (FINAL CARD) */}
         <section className="mb-12 md:mb-16">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-[#0A0A0A] border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col items-center text-center hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300">
+            <div className="bg-[#f8f9fa] dark:bg-[#0A0A0A] border-l-4 border-[#58B12F] rounded-xl p-6 lg:p-8 flex flex-col items-center text-center hover:shadow-[0_0_30px_rgba(88,177,47,0.2)] transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-[#58B12F] to-[#FAFF00] rounded-lg flex items-center justify-center mb-4">
-                <PlantIcon className="w-8 h-8 text-white" />
+                <PlantIcon className="w-8 h-8 text-black dark:text-white" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+              <h3 className="text-2xl md:text-3xl font-semibold text-black dark:text-white mb-4">
                 Full Celo dApp - Coming Soon
               </h3>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6 max-w-2xl">
+              <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-6 max-w-2xl">
                 The complete DeCleanup experience is launching soon on Celo with
                 full dashboard, leaderboard, streaks, governance, Impact Product
                 management, and Hypercert generation.
               </p>
               <button
                 disabled
-                className="bg-gray-800 text-gray-300 cursor-not-allowed px-8 py-3 text-base font-semibold tracking-wider opacity-50 pointer-events-none rounded-lg"
+                className="bg-gray-800 text-gray-700 dark:text-gray-300 cursor-not-allowed px-8 py-3 text-base font-semibold tracking-wider opacity-50 pointer-events-none rounded-lg"
               >
                 Coming Soon
               </button>

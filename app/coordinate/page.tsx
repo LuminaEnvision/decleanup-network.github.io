@@ -55,15 +55,15 @@ const outcomes = [
 
 export default function CoordinatePage() {
   return (
-    <main className="min-h-screen bg-black text-white font-sans selection:bg-[#58B12F] selection:text-black">
+    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans selection:bg-[#58B12F] selection:text-black">
       <SubPageNav />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:py-16">
 
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bebas uppercase text-white mb-6 tracking-wide">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bebas uppercase text-black dark:text-white mb-6 tracking-wide">
             Coordinate & Scale Impact
           </h1>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-2">
+          <p className="text-lg text-gray-800 dark:text-gray-200 max-w-2xl mx-auto mb-2">
             For those who build and coordinate impact
           </p>
           <p className="text-xl text-[#58B12F] font-medium">
@@ -74,7 +74,7 @@ export default function CoordinatePage() {
         <div className="max-w-5xl mx-auto space-y-16">
           {/* The Problem */}
           <section>
-            <h2 className="text-2xl font-bebas text-white mb-6 flex items-center gap-3">
+            <h2 className="text-2xl font-bebas text-black dark:text-white mb-6 flex items-center gap-3">
               <span className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center shrink-0">
                 <svg className="w-6 h-6 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -82,12 +82,12 @@ export default function CoordinatePage() {
               </span>
               The Problem
             </h2>
-            <p className="text-gray-200 mb-4">Impact coordinators struggle with:</p>
+            <p className="text-gray-800 dark:text-gray-200 mb-4">Impact coordinators struggle with:</p>
             <ul className="grid sm:grid-cols-2 gap-3">
               {problemItems.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 p-4 rounded-xl bg-white/5 border border-white/10">
+                <li key={i} className="flex items-start gap-2 p-4 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10">
                   <span className="text-[#58B12F] shrink-0">•</span>
-                  <span className="text-gray-200">{item}</span>
+                  <span className="text-gray-800 dark:text-gray-200">{item}</span>
                 </li>
               ))}
             </ul>
@@ -95,7 +95,7 @@ export default function CoordinatePage() {
 
           {/* What DeCleanup Provides */}
           <section>
-            <h2 className="text-2xl font-bebas text-white mb-6 flex items-center gap-3">
+            <h2 className="text-2xl font-bebas text-black dark:text-white mb-6 flex items-center gap-3">
               <span className="w-10 h-10 rounded-full bg-[#58B12F]/20 flex items-center justify-center shrink-0">
                 <svg className="w-6 h-6 text-[#58B12F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -103,12 +103,12 @@ export default function CoordinatePage() {
               </span>
               What DeCleanup Provides
             </h2>
-            <p className="text-gray-200 mb-4">
+            <p className="text-gray-800 dark:text-gray-200 mb-4">
               DeCleanup is open DMRV infrastructure, not a closed platform. You can:
             </p>
             <ul className="space-y-2">
               {providesItems.map((item, i) => (
-                <li key={i} className="flex items-center gap-2 text-gray-200">
+                <li key={i} className="flex items-center gap-2 text-gray-800 dark:text-gray-200">
                   <span className="text-[#58B12F]">•</span>
                   {item}
                 </li>
@@ -118,11 +118,11 @@ export default function CoordinatePage() {
 
           {/* DMRV as Infrastructure */}
           <section>
-            <h2 className="text-2xl font-bebas text-white mb-6">DMRV as Infrastructure</h2>
-            <p className="text-gray-200 mb-6">
+            <h2 className="text-2xl font-bebas text-black dark:text-white mb-6">DMRV as Infrastructure</h2>
+            <p className="text-gray-800 dark:text-gray-200 mb-6">
               We treat DMRV as a public good layer:
             </p>
-            <ul className="space-y-2 text-gray-200 mb-8">
+            <ul className="space-y-2 text-gray-800 dark:text-gray-200 mb-8">
               <li className="flex items-center gap-2">
                 <span className="text-[#58B12F]">•</span>
                 Cleanup records are immutable
@@ -139,7 +139,7 @@ export default function CoordinatePage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="p-6 rounded-2xl border border-[#58B12F]/30 bg-gray-900/80">
                 <h3 className="text-[#58B12F] font-semibold mb-3">Compatible with</h3>
-                <ul className="space-y-1 text-gray-200 text-sm">
+                <ul className="space-y-1 text-gray-800 dark:text-gray-200 text-sm">
                   {compatibleWith.map((item, i) => (
                     <li key={i}>• {item}</li>
                   ))}
@@ -147,7 +147,7 @@ export default function CoordinatePage() {
               </div>
               <div className="p-6 rounded-2xl border border-[#58B12F]/30 bg-gray-900/80">
                 <h3 className="text-[#58B12F] font-semibold mb-3">This aligns with</h3>
-                <ul className="space-y-1 text-gray-200 text-sm">
+                <ul className="space-y-1 text-gray-800 dark:text-gray-200 text-sm">
                   {alignsWith.map((item, i) => (
                     <li key={i}>• {item}</li>
                   ))}
@@ -158,12 +158,12 @@ export default function CoordinatePage() {
 
           {/* Governance Tools Live on Celo */}
           <section>
-            <h2 className="text-2xl font-bebas text-white mb-6">Governance Tools Live on Celo</h2>
+            <h2 className="text-2xl font-bebas text-black dark:text-white mb-6">Governance Tools Live on Celo</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {governanceItems.map((item, i) => (
                 <div key={i} className="p-6 rounded-2xl border border-[#58B12F]/30 bg-gray-900/80">
-                  <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-300">{item.desc}</p>
+                  <h3 className="text-black dark:text-white font-semibold mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -171,17 +171,17 @@ export default function CoordinatePage() {
 
           {/* Example Funding Pools */}
           <section>
-            <h2 className="text-2xl font-bebas text-white mb-6">Example Funding Pools</h2>
+            <h2 className="text-2xl font-bebas text-black dark:text-white mb-6">Example Funding Pools</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {fundingPools.map((pool, i) => (
-                <div key={i} className="p-4 rounded-xl border border-white/10 bg-white/5">
+                <div key={i} className="p-4 rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
                   <div className="flex items-start justify-between gap-2">
-                    <span className="text-white font-medium">{pool.name}</span>
+                    <span className="text-black dark:text-white font-medium">{pool.name}</span>
                     {pool.status && (
-                      <span className="text-xs text-gray-400 shrink-0">{pool.status}</span>
+                      <span className="text-xs text-gray-600 dark:text-gray-400 shrink-0">{pool.status}</span>
                     )}
                   </div>
-                  {pool.detail && <p className="text-sm text-gray-400 mt-1">{pool.detail}</p>}
+                  {pool.detail && <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{pool.detail}</p>}
                 </div>
               ))}
             </div>
@@ -189,7 +189,7 @@ export default function CoordinatePage() {
 
           {/* The Outcome */}
           <section>
-            <h2 className="text-2xl font-bebas text-white mb-6 flex items-center gap-3">
+            <h2 className="text-2xl font-bebas text-black dark:text-white mb-6 flex items-center gap-3">
               <span className="w-10 h-10 rounded-full bg-[#FAFF00]/20 flex items-center justify-center shrink-0">
                 <svg className="w-6 h-6 text-[#FAFF00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -199,19 +199,19 @@ export default function CoordinatePage() {
             </h2>
             <ol className="space-y-4">
               {outcomes.map((outcome, i) => (
-                <li key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                <li key={i} className="flex items-start gap-4 p-4 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#58B12F] text-black font-bold text-sm shrink-0">
                     {i + 1}
                   </span>
-                  <span className="text-gray-200">{outcome}</span>
+                  <span className="text-gray-800 dark:text-gray-200">{outcome}</span>
                 </li>
               ))}
             </ol>
           </section>
 
           {/* CTA to Litepaper */}
-          <section className="text-center pt-8 border-t border-white/10">
-            <p className="text-gray-200 mb-4">
+          <section className="text-center pt-8 border-t border-black/10 dark:border-white/10">
+            <p className="text-gray-800 dark:text-gray-200 mb-4">
               For full governance and token details, see the litepaper.
             </p>
             <Link

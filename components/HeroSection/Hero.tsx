@@ -4,7 +4,7 @@ import StartCleaningChoice from "@/components/StartCleaningChoice/StartCleaningC
 const Hero = () => {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black"
       style={{ minHeight: "100dvh" }}
     >
       {/* Aura-style background: gradient orbs + grid overlay */}
@@ -38,12 +38,12 @@ const Hero = () => {
         </h1>
 
         {/* Headline */}
-        <h1 className="mx-auto mb-4 max-w-3xl text-3xl font-medium leading-tight text-white md:text-4xl lg:text-5xl">
+        <h1 className="mx-auto mb-4 max-w-3xl text-3xl font-medium leading-tight text-black dark:text-white md:text-4xl lg:text-5xl">
           Clean Local. Prove Global.
         </h1>
 
         {/* Subheadline */}
-        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-200 md:text-xl">
+        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-800 dark:text-gray-200 md:text-xl">
           Join volunteers worldwide turning trash pickup into verified, rewarded impact.
         </p>
 
@@ -52,7 +52,7 @@ const Hero = () => {
           <StartCleaningChoice />
           <Link
             href="/userguide"
-            className="rounded-xl border border-white/20 px-6 py-3.5 font-medium text-white transition-all duration-300 hover:border-white/40 hover:bg-white/5 min-h-[44px] flex items-center justify-center"
+            className="rounded-xl border border-black/20 dark:border-white/20 px-6 py-3.5 font-medium text-black dark:text-white transition-all duration-300 hover:border-black/40 dark:hover:border-white/40 hover:bg-black/5 dark:hover:bg-white/5 min-h-[44px] flex items-center justify-center"
           >
             How it works
           </Link>

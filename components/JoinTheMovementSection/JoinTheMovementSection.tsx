@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function JoinTheMovementSection() {
   return (
-    <section className="w-full py-16 md:py-24 overflow-hidden bg-black border-t border-white/5">
+    <section className="w-full py-16 md:py-24 overflow-hidden bg-white dark:bg-black border-t border-black/5 dark:border-white/5">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bebas text-white mb-4 tracking-wide">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bebas text-black dark:text-white mb-4 tracking-wide">
           Join the Movement
         </h2>
-        <p className="text-gray-400 mb-10 leading-relaxed">
+        <p className="text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
           Connect with our community and explore everything you need to contribute to a cleaner environment.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

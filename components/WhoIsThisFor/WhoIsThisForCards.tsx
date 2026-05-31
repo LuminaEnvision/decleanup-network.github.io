@@ -47,14 +47,14 @@ export default function WhoIsThisForCards() {
           <p className="mb-3 text-xs font-medium text-[#58B12F] uppercase tracking-wider">
             {card.smallTitle}
           </p>
-          <h2 className="mb-3 text-xl font-bebas font-medium text-white uppercase tracking-wide">
+          <h2 className="mb-3 text-xl font-bebas font-medium text-black dark:text-white uppercase tracking-wide">
             {card.title}
           </h2>
-          <p className="mb-5 text-gray-200 text-sm leading-relaxed">
+          <p className="mb-5 text-gray-800 dark:text-gray-200 text-sm leading-relaxed">
             {card.body}
           </p>
           {card.bullets.length > 0 && (
-            <ul className="mb-6 min-h-[7.5rem] list-none space-y-2 text-sm text-gray-300">
+            <ul className="mb-6 min-h-[7.5rem] list-none space-y-2 text-sm text-gray-700 dark:text-gray-300">
               {card.bullets.map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-[#58B12F] shrink-0">•</span>

@@ -21,23 +21,23 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="w-full py-16 md:py-24 bg-black border-t border-white/5 scroll-mt-24">
+    <section id="faq" className="w-full py-16 md:py-24 bg-white dark:bg-black border-t border-black/5 dark:border-white/5 scroll-mt-24">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bebas text-white text-center mb-12 tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-bebas text-black dark:text-white text-center mb-12 tracking-wide">
           Questions
         </h2>
         <div className="space-y-2">
           {faqs.map((faq, index) => (
             <details
               key={index}
-              className="group bg-neutral-900/50 border border-white/10 rounded-xl overflow-hidden"
+              className="group bg-neutral-900/50 border border-black/10 dark:border-white/10 rounded-xl overflow-hidden"
             >
-              <summary className="list-none flex items-center justify-between gap-4 px-5 py-4 cursor-pointer text-left font-medium text-white hover:bg-white/5 transition-colors min-h-[44px]">
+              <summary className="list-none flex items-center justify-between gap-4 px-5 py-4 cursor-pointer text-left font-medium text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/5 transition-colors min-h-[44px]">
                 <span>{faq.q}</span>
                 <span className="shrink-0 text-gray-500 group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <div className="px-5 pb-4 pt-0">
-                <p className="text-gray-400 text-sm leading-relaxed pl-0">{faq.a}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed pl-0">{faq.a}</p>
               </div>
             </details>
           ))}

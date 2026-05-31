@@ -10,9 +10,9 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="w-full py-16 md:py-24 bg-black border-t border-white/5 scroll-mt-24">
+    <section id="how-it-works" className="w-full py-16 md:py-24 bg-white dark:bg-black border-t border-black/5 dark:border-white/5 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bebas text-white text-center mb-12 tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-bebas text-black dark:text-white text-center mb-12 tracking-wide">
           How It Works
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 relative">
@@ -26,8 +26,8 @@ export default function HowItWorksSection() {
                   <Icon className="w-7 h-7 text-[#58B12F]" />
                 </div>
                 <span className="text-2xl font-bebas text-[#FAFF00] mb-2">{step.number}</span>
-                <h3 className="text-xl font-bebas text-white mb-2 tracking-wide">{step.title}</h3>
-                <p className="text-gray-400 text-sm">{step.description}</p>
+                <h3 className="text-xl font-bebas text-black dark:text-white mb-2 tracking-wide">{step.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">{step.description}</p>
               </div>
             );
           })}

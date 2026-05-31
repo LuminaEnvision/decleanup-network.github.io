@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function DocsPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-white font-sans selection:bg-[#58B12F] selection:text-white">
+    <div className="min-h-screen bg-[#f8f9fa] dark:bg-[#0A0A0A] text-black dark:text-white font-sans selection:bg-[#58B12F] selection:text-black dark:selection:text-white">
       <SubPageNav />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:py-16">
         {/* Header */}
@@ -18,27 +18,27 @@ export default function DocsPage() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#FAFF00] animate-pulse" />
               DOCS
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tighter mb-4 font-bebas">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-black dark:text-white leading-tight tracking-tighter mb-4 font-bebas">
               NETWORK <span className="text-[#58B12F]">DOCUMENTATION</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-xl mx-auto font-light">
+            <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 max-w-xl mx-auto font-light">
               Guides and resources for the DeCleanup Network.
             </p>
           </div>
         </div>
 
         {/* Tech stack / What we build with */}
-        <section className="py-16 md:py-24 border-t border-white/5">
+        <section className="py-16 md:py-24 border-t border-black/5 dark:border-white/5">
           <div className="max-w-7xl mx-auto px-0">
-            <h2 className="text-4xl md:text-5xl text-center mb-4 font-bebas text-gray-200">TECH STACK</h2>
-            <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl text-center mb-4 font-bebas text-gray-800 dark:text-gray-200">TECH STACK</h2>
+            <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
               A simple overview of what powers DeCleanup. For full technical docs and source code, see GitHub.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
+              <div className="bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
                 <h3 className="text-xl font-bebas tracking-wide text-[#58B12F] mb-2">Smart contracts</h3>
-                <p className="text-sm text-gray-200 mb-4">Verification, tokens, and core logic on Base and Celo.</p>
+                <p className="text-sm text-gray-800 dark:text-gray-200 mb-4">Verification, tokens, and core logic on Base and Celo.</p>
                 <div className="flex flex-wrap gap-3">
                   <a href="https://github.com/DeCleanup-Network/Farcaster-Mini-App/tree/main/contracts/contracts" target="_blank" rel="noopener noreferrer" className="text-sm text-[#58B12F] hover:text-[#FAFF00] font-medium">
                     Base →
@@ -48,9 +48,9 @@ export default function DocsPage() {
                   </a>
                 </div>
               </div>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#FAFF00]/30 transition-colors">
+              <div className="bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:border-[#FAFF00]/30 transition-colors">
                 <h3 className="text-xl font-bebas tracking-wide text-[#FAFF00] mb-2">Frontend & mini apps</h3>
-                <p className="text-sm text-gray-200 mb-4">Web app, PWA, and Farcaster mini app.</p>
+                <p className="text-sm text-gray-800 dark:text-gray-200 mb-4">Web app, PWA, and Farcaster mini app.</p>
                 <div className="flex flex-wrap gap-3">
                   <a href="https://github.com/DeCleanup-Network/Farcaster-Mini-App/tree/main/app" target="_blank" rel="noopener noreferrer" className="text-sm text-[#58B12F] hover:text-[#FAFF00] font-medium">
                     Base →
@@ -60,19 +60,19 @@ export default function DocsPage() {
                   </a>
                 </div>
               </div>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
-                <h3 className="text-xl font-bebas tracking-wide text-white mb-2">Indexing & subgraphs</h3>
-                <p className="text-sm text-gray-200 mb-4">Query cleanup and token data for apps and analytics.</p>
+              <div className="bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
+                <h3 className="text-xl font-bebas tracking-wide text-black dark:text-white mb-2">Indexing & subgraphs</h3>
+                <p className="text-sm text-gray-800 dark:text-gray-200 mb-4">Query cleanup and token data for apps and analytics.</p>
                 <span className="text-sm text-gray-500">Coming soon</span>
               </div>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
-                <h3 className="text-xl font-bebas tracking-wide text-white mb-2">AI verification</h3>
-                <p className="text-sm text-gray-200 mb-4">Computer vision for verifying cleanup impact.</p>
+              <div className="bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:border-[#58B12F]/30 transition-colors">
+                <h3 className="text-xl font-bebas tracking-wide text-black dark:text-white mb-2">AI verification</h3>
+                <p className="text-sm text-gray-800 dark:text-gray-200 mb-4">Computer vision for verifying cleanup impact.</p>
                 <span className="text-sm text-gray-500">Docs coming soon</span>
               </div>
-              <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-[#FAFF00]/30 transition-colors md:col-span-2">
+              <div className="bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 hover:border-[#FAFF00]/30 transition-colors md:col-span-2">
                 <h3 className="text-xl font-bebas tracking-wide text-[#FAFF00] mb-2">Governance</h3>
-                <p className="text-sm text-gray-200 mb-4">Funding pools and voting on Celo via Gardens.</p>
+                <p className="text-sm text-gray-800 dark:text-gray-200 mb-4">Funding pools and voting on Celo via Gardens.</p>
                 <span className="text-sm text-gray-500">Coming soon</span>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function DocsPage() {
               >
                 DeCleanup on GitHub →
               </a>
-              <p className="text-sm text-gray-400 mt-4 max-w-md mx-auto">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4 max-w-md mx-auto">
                 Full technical docs, source code, and contribution guides are on GitHub.
               </p>
             </div>

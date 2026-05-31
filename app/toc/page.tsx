@@ -81,7 +81,7 @@ function Card({
         : "";
   return (
     <div
-      className={`bg-neutral-900/80 border border-neutral-800 rounded-2xl transition-all duration-300 ${accentClass} ${className}`}
+      className={`bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-2xl transition-all duration-300 ${accentClass} ${className}`}
     >
       {children}
     </div>
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
 
 export default function TocPage() {
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-white font-sans selection:bg-[#58B12F] selection:text-white">
+    <div className="min-h-screen bg-[#f8f9fa] dark:bg-[#0A0A0A] text-black dark:text-white font-sans selection:bg-[#58B12F] selection:text-black dark:selection:text-white">
       <SubPageNav />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pb-16">
 
@@ -110,7 +110,7 @@ export default function TocPage() {
             WHY CLEANUP{" "}
             <span className="text-[#58B12F]">STAYS INVISIBLE</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
             DeCleanup Network converts grassroots environmental action into verified, funded, and onchain-permanent impact.
           </p>
 
@@ -131,12 +131,12 @@ export default function TocPage() {
         </div>
 
         {/* ─── 01 Root Cause ─── */}
-        <section id="problem" className="py-16 md:py-24 border-t border-white/5 scroll-mt-24">
+        <section id="problem" className="py-16 md:py-24 border-t border-black/5 dark:border-white/5 scroll-mt-24">
           <SectionLabel>01 - Root Cause</SectionLabel>
           <SectionHeading>
             The problem isn&apos;t a lack of action
           </SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             Volunteers organize. NGOs mobilize. Communities clean every single day. The problem is that this action remains
             invisible - producing no data that funders, partners, or institutions can trust, verify, or build upon.
           </p>
@@ -179,7 +179,7 @@ export default function TocPage() {
                   <Icon className={`w-5 h-5 ${iconColor}`} />
                 </div>
                 <h3 className={`text-xl font-bebas tracking-wide ${titleColor} mb-2`}>{title}</h3>
-                <p className="text-sm text-gray-300 mb-4 leading-relaxed">{desc}</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">{desc}</p>
                 <p className="text-xs font-mono text-gray-500 flex items-center gap-1.5">
                   <ArrowRight className="w-3 h-3" />
                   {note}
@@ -191,7 +191,7 @@ export default function TocPage() {
           {/* Vision callout */}
           <div className="relative bg-neutral-900/80 border border-[#58B12F]/25 rounded-2xl p-6 md:p-8 overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#58B12F] to-[#58B12F]/0 rounded-l-2xl" />
-            <p className="text-gray-200 font-medium leading-relaxed pl-2">
+            <p className="text-gray-800 dark:text-gray-200 font-medium leading-relaxed pl-2">
               A world where every cleanup event produces{" "}
               <span className="text-[#58B12F] font-semibold">trusted, portable data</span> that connects grassroots action
               to institutional funding, policy decisions, and regenerative ecosystem coordination.
@@ -201,10 +201,10 @@ export default function TocPage() {
         </section>
 
         {/* ─── 02 Core Logic ─── */}
-        <section id="logic" className="py-16 md:py-24 border-t border-white/5 scroll-mt-24">
+        <section id="logic" className="py-16 md:py-24 border-t border-black/5 dark:border-white/5 scroll-mt-24">
           <SectionLabel>02 - Core Logic</SectionLabel>
           <SectionHeading>From photo to funded impact</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             A single verified submission triggers a chain of value that compounds over time.
           </p>
 
@@ -226,8 +226,8 @@ export default function TocPage() {
                   <div className="inline-flex items-center justify-center w-9 h-9 rounded-xl bg-[#58B12F]/10 mb-3">
                     <step.Icon className="w-4 h-4 text-[#58B12F]" />
                   </div>
-                  <h3 className="text-lg font-bebas tracking-wide text-white mb-1">{step.label}</h3>
-                  <p className="text-xs text-gray-400 leading-relaxed">{step.desc}</p>
+                  <h3 className="text-lg font-bebas tracking-wide text-black dark:text-white mb-1">{step.label}</h3>
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>
                 </Card>
               ))}
             </div>
@@ -239,9 +239,9 @@ export default function TocPage() {
               <Target className="w-3.5 h-3.5" />
               30-Second Strategy Test
             </p>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
               We discovered that{" "}
-              <strong className="text-white">grassroots cleanup cannot attract institutional capital because it produces no verifiable data.</strong>{" "}
+              <strong className="text-black dark:text-white">grassroots cleanup cannot attract institutional capital because it produces no verifiable data.</strong>{" "}
               So we are prioritizing{" "}
               <em className="text-[#58B12F] not-italic font-medium">verification infrastructure first</em> - a 60-second documentation process that
               creates immutable onchain records. We are testing this by running a hybrid AI + human validation pipeline and piloting with few communities around the world. If we can show{" "}
@@ -252,10 +252,10 @@ export default function TocPage() {
         </section>
 
         {/* ─── 03 Inputs / Outputs ─── */}
-        <section className="py-16 md:py-24 border-t border-white/5">
+        <section className="py-16 md:py-24 border-t border-black/5 dark:border-white/5">
           <SectionLabel>03 - Resources</SectionLabel>
           <SectionHeading>Inputs - Outputs</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             What we put in and what the network produces. Outputs connect to measurable behavior change.
           </p>
 
@@ -278,7 +278,7 @@ export default function TocPage() {
                     <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#58B12F]/10 shrink-0">
                       <Icon className="w-4 h-4 text-[#58B12F]" />
                     </div>
-                    <span className="text-sm text-gray-200">{text}</span>
+                    <span className="text-sm text-gray-800 dark:text-gray-200">{text}</span>
                   </Card>
                 ))}
               </div>
@@ -302,7 +302,7 @@ export default function TocPage() {
                     <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#FAFF00]/10 shrink-0">
                       <Icon className="w-4 h-4 text-[#FAFF00]" />
                     </div>
-                    <span className="text-sm text-gray-200">{text}</span>
+                    <span className="text-sm text-gray-800 dark:text-gray-200">{text}</span>
                   </Card>
                 ))}
               </div>
@@ -311,10 +311,10 @@ export default function TocPage() {
         </section>
 
         {/* ─── 04 Pathways (vertical tree) ─── */}
-        <section id="pathways" className="py-16 md:py-24 border-t border-white/5 scroll-mt-24">
+        <section id="pathways" className="py-16 md:py-24 border-t border-black/5 dark:border-white/5 scroll-mt-24">
           <SectionLabel>04 - Causal Pathways</SectionLabel>
           <SectionHeading>Four pathways to systemic change</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             From shared root to canopy: trust creation is the trunk; coordination and incentives branch in parallel; verification credibility is where institutional trust lives.
           </p>
 
@@ -322,7 +322,7 @@ export default function TocPage() {
             {/* Root: DMRV Infrastructure */}
             <Card accent="green" className="w-full p-6 text-center">
               <div className="text-xs text-[#58B12F] uppercase tracking-widest font-mono font-bold mb-2">Shared root</div>
-              <h3 className="text-xl font-bebas text-white leading-tight">DMRV Infrastructure</h3>
+              <h3 className="text-xl font-bebas text-black dark:text-white leading-tight">DMRV Infrastructure</h3>
             </Card>
 
             {/* Connector ↓ */}
@@ -336,13 +336,13 @@ export default function TocPage() {
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-mono font-bold bg-[#58B12F]/15 text-[#58B12F]">P1</span>
                 <div>
-                  <h3 className="text-xl font-bebas text-white leading-tight">Trust Creation</h3>
+                  <h3 className="text-xl font-bebas text-black dark:text-white leading-tight">Trust Creation</h3>
                   <p className="text-xs text-gray-500">Trunk — what makes everything else possible</p>
                 </div>
               </div>
               <ul className="space-y-2.5">
                 {["Documentation under 60s", "Geotag + timestamp", "Verifiable onchain records", "Funders gain confidence", "Capital flows to verified cleanups"].map((s) => (
-                  <li key={s} className="flex items-center gap-2.5 text-sm text-gray-200">
+                  <li key={s} className="flex items-center gap-2.5 text-sm text-gray-800 dark:text-gray-200">
                     <CheckMark green />
                     {s}
                   </li>
@@ -352,8 +352,8 @@ export default function TocPage() {
 
             {/* Labeled connector: P1 enables scale */}
             <div className="w-full py-4 px-4 text-center">
-              <div className="w-full border-t border-b border-white/10 py-3">
-                <p className="text-sm text-gray-400 italic">P1 Trust enables shared infrastructure to scale</p>
+              <div className="w-full border-t border-b border-black/10 dark:border-white/10 py-3">
+                <p className="text-sm text-gray-600 dark:text-gray-400 italic">P1 Trust enables shared infrastructure to scale</p>
               </div>
             </div>
 
@@ -368,19 +368,19 @@ export default function TocPage() {
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-mono font-bold bg-[#FAFF00]/10 text-[#FAFF00]">P2</span>
                     <div>
-                      <h3 className="text-xl font-bebas text-white leading-tight">Coordination</h3>
+                      <h3 className="text-xl font-bebas text-black dark:text-white leading-tight">Coordination</h3>
                       <p className="text-xs text-gray-500">Shared infrastructure — network effects</p>
                     </div>
                   </div>
                   <ul className="space-y-2.5 flex-1">
                     {["Shared DMRV across regions", "Common data standards", "Organizers discover best practices", "Knowledge transfer", "Effectiveness improves network-wide"].map((s) => (
-                      <li key={s} className="flex items-center gap-2.5 text-sm text-gray-200">
+                      <li key={s} className="flex items-center gap-2.5 text-sm text-gray-800 dark:text-gray-200">
                         <CheckMark green={false} />
                         {s}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 pt-3 border-t border-white/10 text-xs text-[#FAFF00]/80">
+                  <div className="mt-4 pt-3 border-t border-black/10 dark:border-white/10 text-xs text-[#FAFF00]/80">
                     → More organizers generate more submissions
                   </div>
                 </Card>
@@ -395,19 +395,19 @@ export default function TocPage() {
                   <div className="flex items-center gap-3 mb-3">
                     <span className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-mono font-bold bg-[#58B12F]/15 text-[#58B12F]">P3</span>
                     <div>
-                      <h3 className="text-xl font-bebas text-white leading-tight">Incentives</h3>
+                      <h3 className="text-xl font-bebas text-black dark:text-white leading-tight">Incentives</h3>
                       <p className="text-xs text-gray-500">Recognition — sustained behavior</p>
                     </div>
                   </div>
                   <ul className="space-y-2.5 flex-1">
                     {["$bDCU structured recognition", "Tangible acknowledgment per action", "Episodic → sustained participation", "Documentation normalized", "Data quality improves"].map((s) => (
-                      <li key={s} className="flex items-center gap-2.5 text-sm text-gray-200">
+                      <li key={s} className="flex items-center gap-2.5 text-sm text-gray-800 dark:text-gray-200">
                         <CheckMark green />
                         {s}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-4 pt-3 border-t border-white/10 text-xs text-[#58B12F]/90">
+                  <div className="mt-4 pt-3 border-t border-black/10 dark:border-white/10 text-xs text-[#58B12F]/90">
                     → Higher volume feeds verification pipeline
                   </div>
                 </Card>
@@ -416,8 +416,8 @@ export default function TocPage() {
 
             {/* Converge line */}
             <div className="w-full py-4 px-4 text-center">
-              <div className="w-full border-t border-b border-white/10 py-3">
-                <p className="text-sm text-gray-400 italic">P2 + P3 converge: volume × quality feeds the verification layer</p>
+              <div className="w-full border-t border-b border-black/10 dark:border-white/10 py-3">
+                <p className="text-sm text-gray-600 dark:text-gray-400 italic">P2 + P3 converge: volume × quality feeds the verification layer</p>
               </div>
             </div>
 
@@ -426,19 +426,19 @@ export default function TocPage() {
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-9 h-9 rounded-xl flex items-center justify-center text-sm font-mono font-bold bg-[#FAFF00]/10 text-[#FAFF00]">P4</span>
                 <div>
-                  <h3 className="text-xl font-bebas text-white leading-tight">Verification Credibility</h3>
+                  <h3 className="text-xl font-bebas text-black dark:text-white leading-tight">Verification Credibility</h3>
                   <p className="text-xs text-gray-500">Canopy — where institutional trust lives</p>
                 </div>
               </div>
               <ul className="space-y-2.5">
                 {["Open source waste detection model", "AI flags for human review", "Hybrid reduces fraud", "Quality = network reputation", "Partners trust for ESG reporting"].map((s) => (
-                  <li key={s} className="flex items-center gap-2.5 text-sm text-gray-200">
+                  <li key={s} className="flex items-center gap-2.5 text-sm text-gray-800 dark:text-gray-200">
                     <CheckMark green={false} />
                     {s}
                   </li>
                 ))}
               </ul>
-              <div className="mt-4 pt-3 border-t border-white/10 text-xs text-[#FAFF00]/80 flex items-center gap-1.5">
+              <div className="mt-4 pt-3 border-t border-black/10 dark:border-white/10 text-xs text-[#FAFF00]/80 flex items-center gap-1.5">
                 <span aria-hidden>↺</span> Loops back to P1
               </div>
             </Card>
@@ -446,10 +446,10 @@ export default function TocPage() {
         </section>
 
         {/* ─── 05 SMART Outcomes ─── */}
-        <section id="outcomes" className="py-16 md:py-24 border-t border-white/5 scroll-mt-24">
+        <section id="outcomes" className="py-16 md:py-24 border-t border-black/5 dark:border-white/5 scroll-mt-24">
           <SectionLabel>05 - SMART Outcomes</SectionLabel>
           <SectionHeading>Measurable targets across three horizons</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             Outputs are activity. Outcomes are behavior change. Every target passes the &quot;So What?&quot; test.
           </p>
 
@@ -486,8 +486,8 @@ export default function TocPage() {
               {
                 phase: "Long-Term",
                 range: "24-48 Months",
-                color: "text-white",
-                borderColor: "border-white/10",
+                color: "text-black dark:text-white",
+                borderColor: "border-black/10 dark:border-white/10",
                 outcomes: [
                   "$100k+ capital to verified cleanups",
                   "30% partners adopting DMRV",
@@ -501,14 +501,14 @@ export default function TocPage() {
               <div key={block.phase}>
                 <div className="flex items-center gap-3 mb-5">
                   <Clock className={`w-4 h-4 ${block.color}`} />
-                  <p className="text-xs font-mono text-gray-400">
+                  <p className="text-xs font-mono text-gray-600 dark:text-gray-400">
                     <span className={`${block.color} font-semibold`}>{block.phase}</span> · {block.range}
                   </p>
                 </div>
                 <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 border-l-2 ${block.borderColor} pl-5`}>
                   {block.outcomes.map((o) => (
                     <Card key={o} accent="green" className="p-4">
-                      <p className="text-sm text-gray-200 leading-snug">{o}</p>
+                      <p className="text-sm text-gray-800 dark:text-gray-200 leading-snug">{o}</p>
                     </Card>
                   ))}
                 </div>
@@ -518,10 +518,10 @@ export default function TocPage() {
         </section>
 
         {/* ─── 06 Decentralization Roadmap ─── */}
-        <section id="verification" className="py-16 md:py-24 border-t border-white/5 scroll-mt-24">
+        <section id="verification" className="py-16 md:py-24 border-t border-black/5 dark:border-white/5 scroll-mt-24">
           <SectionLabel>06 - Decentralization Roadmap</SectionLabel>
           <SectionHeading>Verification: trusted to trustless</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             Progressive decentralization. Quality standards first, then distributed responsibility.
           </p>
 
@@ -561,7 +561,7 @@ export default function TocPage() {
               },
               {
                 badge: "Planned",
-                badgeStyle: "bg-neutral-700/50 text-gray-400",
+                badgeStyle: "bg-neutral-700/50 text-gray-600 dark:text-gray-400",
                 Icon: Lock,
                 title: "Phase 3",
                 subtitle: "Trustless",
@@ -583,16 +583,16 @@ export default function TocPage() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className={`text-xs font-mono px-2.5 py-1 rounded-full ${ph.badgeStyle}`}>{ph.badge}</span>
-                  <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center">
-                    <ph.Icon className="w-4 h-4 text-gray-400" />
+                  <div className="w-8 h-8 rounded-xl bg-black/5 dark:bg-white/5 flex items-center justify-center">
+                    <ph.Icon className="w-4 h-4 text-gray-600 dark:text-gray-400" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bebas text-white mb-0.5">{ph.title}</h3>
+                <h3 className="text-2xl font-bebas text-black dark:text-white mb-0.5">{ph.title}</h3>
                 <p className="text-xs font-medium text-[#58B12F] mb-2">{ph.subtitle}</p>
-                <p className="text-sm text-gray-400 mb-5 leading-relaxed">{ph.desc}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">{ph.desc}</p>
                 <ul className="space-y-2.5">
                   {ph.items.map((it) => (
-                    <li key={it} className="flex items-center gap-2.5 text-sm text-gray-200">
+                    <li key={it} className="flex items-center gap-2.5 text-sm text-gray-800 dark:text-gray-200">
                       <CheckMark />
                       {it}
                     </li>
@@ -604,10 +604,10 @@ export default function TocPage() {
         </section>
 
         {/* ─── 07 Stakeholders ─── */}
-        <section className="py-16 md:py-24 border-t border-white/5">
+        <section className="py-16 md:py-24 border-t border-black/5 dark:border-white/5">
           <SectionLabel>07 - Stakeholders</SectionLabel>
           <SectionHeading>Who makes the network work</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             Six participant types. The network functions when all six are active.
           </p>
 
@@ -625,7 +625,7 @@ export default function TocPage() {
                   <Icon className={`w-5 h-5 ${accent === "green" ? "text-[#58B12F]" : "text-[#FAFF00]"}`} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bebas text-white">{name}</h3>
+                  <h3 className="text-lg font-bebas text-black dark:text-white">{name}</h3>
                   <p className="text-xs text-gray-500">{label}</p>
                 </div>
               </Card>
@@ -634,23 +634,23 @@ export default function TocPage() {
         </section>
 
         {/* ─── 08 Assumptions ─── */}
-        <section className="py-16 md:py-24 border-t border-white/5">
+        <section className="py-16 md:py-24 border-t border-black/5 dark:border-white/5">
           <SectionLabel>08 - Assumptions</SectionLabel>
           <SectionHeading>What must be true and how we test it</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             Every pathway rests on assumptions. We state them, test early, and pivot if they fail.
           </p>
 
-          <div className="overflow-x-auto rounded-2xl border border-neutral-800">
+          <div className="overflow-x-auto rounded-2xl border border-neutral-200 dark:border-neutral-800">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-neutral-900 border-b border-neutral-800">
-                  <th className="text-left py-4 px-6 font-bebas text-white tracking-wide">Assumption</th>
-                  <th className="text-left py-4 px-6 font-bebas text-white tracking-wide whitespace-nowrap">Timeline</th>
-                  <th className="text-left py-4 px-6 font-bebas text-white tracking-wide">Success Criteria</th>
+                <tr className="bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
+                  <th className="text-left py-4 px-6 font-bebas text-black dark:text-white tracking-wide">Assumption</th>
+                  <th className="text-left py-4 px-6 font-bebas text-black dark:text-white tracking-wide whitespace-nowrap">Timeline</th>
+                  <th className="text-left py-4 px-6 font-bebas text-black dark:text-white tracking-wide">Success Criteria</th>
                 </tr>
               </thead>
-              <tbody className="text-gray-300">
+              <tbody className="text-gray-700 dark:text-gray-300">
                 {[
                   ["Volunteers document if process <60s", "Month 1-3", "70%+ completion rate"],
                   ["Funders value verified over self-reported", "Month 3-6", "1+ funding decision cites data"],
@@ -662,7 +662,7 @@ export default function TocPage() {
                   <tr key={i} className="border-b border-neutral-800/50 hover:bg-neutral-900/60 transition-colors">
                     <td className="py-4 px-6">{row[0]}</td>
                     <td className="py-4 px-6 text-[#58B12F] whitespace-nowrap font-medium">{row[1]}</td>
-                    <td className="py-4 px-6 text-gray-400">{row[2]}</td>
+                    <td className="py-4 px-6 text-gray-600 dark:text-gray-400">{row[2]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -671,10 +671,10 @@ export default function TocPage() {
         </section>
 
         {/* ─── 09 Risk Register ─── */}
-        <section id="risks" className="py-16 md:py-24 border-t border-white/5 scroll-mt-24">
+        <section id="risks" className="py-16 md:py-24 border-t border-black/5 dark:border-white/5 scroll-mt-24">
           <SectionLabel>09 - Risk Register</SectionLabel>
           <SectionHeading>Known risks - how we respond</SectionHeading>
-          <p className="text-gray-300 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mb-12 leading-relaxed">
             Good strategy names risks, assigns probability and impact, and prepares mitigations.
           </p>
 
@@ -711,8 +711,8 @@ export default function TocPage() {
                 },
               }[r.level] ?? {
                 Icon: Circle,
-                badge: "bg-neutral-700/50 text-gray-400",
-                iconColor: "text-gray-400",
+                badge: "bg-neutral-700/50 text-gray-600 dark:text-gray-400",
+                iconColor: "text-gray-600 dark:text-gray-400",
                 iconBg: "bg-neutral-700/20",
               };
 
@@ -726,8 +726,8 @@ export default function TocPage() {
                       <levelMap.Icon className={`w-4 h-4 ${levelMap.iconColor}`} />
                     </div>
                   </div>
-                  <h3 className="text-lg font-bebas text-white mb-1 leading-tight">{r.name}</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">{r.mit}</p>
+                  <h3 className="text-lg font-bebas text-black dark:text-white mb-1 leading-tight">{r.name}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{r.mit}</p>
                 </Card>
               );
             })}
@@ -735,12 +735,12 @@ export default function TocPage() {
         </section>
 
         {/* ─── CTA ─── */}
-        <section className="py-16 md:py-24 border-t border-white/5">
+        <section className="py-16 md:py-24 border-t border-black/5 dark:border-white/5">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bebas text-white mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bebas text-black dark:text-white mb-4 leading-tight">
               Ready to be part of the proof?
             </h2>
-            <p className="text-gray-300 mb-10 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 mb-10 leading-relaxed">
               Every cleanup you verify is a data point that makes the next funder more confident.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -757,7 +757,7 @@ export default function TocPage() {
                 href="https://t.me/DecentralizedCleanup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-neutral-600 hover:border-[#58B12F]/50 text-gray-200 font-semibold transition-all hover:-translate-y-0.5 duration-300"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-neutral-600 hover:border-[#58B12F]/50 text-gray-800 dark:text-gray-200 font-semibold transition-all hover:-translate-y-0.5 duration-300"
               >
                 Join community
               </a>

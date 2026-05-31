@@ -5,7 +5,7 @@ import SDGsFooter from "../SDGsFooter/SDGsFooter";
 
 export default function HomeFooter() {
   return (
-    <div className="w-full py-12 overflow-hidden bg-black border-t border-white/5">
+    <div className="w-full py-12 overflow-hidden bg-white dark:bg-black border-t border-black/5 dark:border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <BackedBy />
         <SDGsFooter />

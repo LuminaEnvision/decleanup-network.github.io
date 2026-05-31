@@ -15,31 +15,31 @@ export default function TokenSection() {
   };
 
   return (
-    <section id="token" className="w-full py-16 md:py-24 bg-neutral-950 border-t border-white/5 scroll-mt-24">
+    <section id="token" className="w-full py-16 md:py-24 bg-neutral-950 border-t border-black/5 dark:border-white/5 scroll-mt-24">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl md:text-5xl font-bebas text-white mb-4 tracking-wide">
+        <h2 className="text-4xl md:text-5xl font-bebas text-black dark:text-white mb-4 tracking-wide">
           $bDCU Token
         </h2>
-        <p className="text-gray-400 mb-10 text-lg">
+        <p className="text-gray-600 dark:text-gray-400 mb-10 text-lg">
           The reward layer for verified environmental action on Base.
         </p>
-        <div className="bg-neutral-900/80 border border-white/10 rounded-2xl p-6 md:p-8 text-left space-y-4">
+        <div className="bg-neutral-900/80 border border-black/10 dark:border-white/10 rounded-2xl p-6 md:p-8 text-left space-y-4">
           <div className="flex justify-between items-center">
             <span className="text-gray-500 text-sm">Network</span>
-            <span className="text-white font-medium">Base</span>
+            <span className="text-black dark:text-white font-medium">Base</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-gray-500 text-sm">Circulating supply</span>
-            <span className="text-white font-medium">~85%</span>
+            <span className="text-black dark:text-white font-medium">~85%</span>
           </div>
           <div>
             <span className="text-gray-500 text-sm block mb-2">Contract</span>
             <div className="flex items-center gap-2 flex-wrap">
-              <code className="text-xs text-gray-300 font-mono break-all flex-1">{CONTRACT}</code>
+              <code className="text-xs text-gray-700 dark:text-gray-300 font-mono break-all flex-1">{CONTRACT}</code>
               <button
                 type="button"
                 onClick={copyContract}
-                className="shrink-0 px-3 py-1.5 rounded-lg bg-white/10 text-gray-200 text-xs hover:bg-[#58B12F]/20 hover:text-[#58B12F] transition-colors min-h-[44px]"
+                className="shrink-0 px-3 py-1.5 rounded-lg bg-black/10 dark:bg-white/10 text-gray-800 dark:text-gray-200 text-xs hover:bg-[#58B12F]/20 hover:text-[#58B12F] transition-colors min-h-[44px]"
               >
                 {copied ? "Copied" : "Copy"}
               </button>
@@ -57,7 +57,7 @@ export default function TokenSection() {
           </a>
           <Link
             href="/tokenomics"
-            className="text-gray-400 hover:text-[#58B12F] transition-colors text-sm underline"
+            className="text-gray-600 dark:text-gray-400 hover:text-[#58B12F] transition-colors text-sm underline"
           >
             Full tokenomics
           </Link>

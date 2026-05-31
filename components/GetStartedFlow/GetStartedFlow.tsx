@@ -68,8 +68,8 @@ function GuideLinks({ variant }: { variant: "base" | "celo" | "wallet" }) {
           { label: "Farcaster setup", href: GUIDE_LINKS.farcasterDocs },
         ];
   return (
-    <div className="mt-4 pt-4 border-t border-white/10">
-      <p className="text-xs text-gray-300 mb-2 uppercase tracking-wide">Guides</p>
+    <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
+      <p className="text-xs text-gray-700 dark:text-gray-300 mb-2 uppercase tracking-wide">Guides</p>
       <ul className="space-y-1 text-sm">
         {links.map((l) => (
           <li key={l.href}>
@@ -99,10 +99,10 @@ export default function GetStartedFlow() {
         <div className="space-y-6">
           {/* Header */}
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            <h2 className="text-2xl md:text-3xl font-bold text-black dark:text-white mb-3">
               For those who care about the planet
             </h2>
-            <p className="text-gray-200 text-sm md:text-base max-w-2xl mx-auto">
+            <p className="text-gray-800 dark:text-gray-200 text-sm md:text-base max-w-2xl mx-auto">
               Environmental action deserves recognition. Here&apos;s what to do to get it.
             </p>
           </div>
@@ -137,10 +137,10 @@ export default function GetStartedFlow() {
                   <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white">The Problem</h3>
+              <h3 className="text-xl font-semibold text-black dark:text-white">The Problem</h3>
             </div>
 
-            <p className="text-gray-200 text-sm mb-4">People clean beaches, rivers, forests - but:</p>
+            <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">People clean beaches, rivers, forests - but:</p>
 
             <div className="grid sm:grid-cols-2 gap-3">
               {[
@@ -184,7 +184,7 @@ export default function GetStartedFlow() {
                 >
                   <div className="flex items-start gap-3">
                     <div className="shrink-0 pt-0.5">{problem.icon}</div>
-                    <p className="text-sm text-gray-300 leading-relaxed">{problem.text}</p>
+                    <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{problem.text}</p>
                   </div>
                 </div>
               ))}
@@ -206,10 +206,10 @@ export default function GetStartedFlow() {
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white">What DeCleanup Changes</h3>
+              <h3 className="text-xl font-semibold text-black dark:text-white">What DeCleanup Changes</h3>
             </div>
 
-            <p className="text-gray-200 text-sm mb-6">We give everyday people a simple flow:</p>
+            <p className="text-gray-800 dark:text-gray-200 text-sm mb-6">We give everyday people a simple flow:</p>
 
             {/* Visual Step Flow */}
             <div className="space-y-3">
@@ -241,7 +241,7 @@ export default function GetStartedFlow() {
               ].map((step, idx) => (
                 <div
                   key={idx}
-                  className={`relative flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${step.color} border border-white/10 hover:border-white/30 transition-all duration-300 group`}
+                  className={`relative flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${step.color} border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 transition-all duration-300 group`}
                   style={{ animation: `slideInRight 0.5s ease-out ${idx * 0.15}s both` }}
                 >
                   <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#58B12F] text-black font-bold text-sm shrink-0">
@@ -250,7 +250,7 @@ export default function GetStartedFlow() {
                   <div className="text-[#58B12F] shrink-0 group-hover:scale-110 transition-transform">
                     {step.icon}
                   </div>
-                  <p className="text-sm text-gray-200 flex-1">{step.text}</p>
+                  <p className="text-sm text-gray-800 dark:text-gray-200 flex-1">{step.text}</p>
                 </div>
               ))}
             </div>
@@ -264,7 +264,7 @@ export default function GetStartedFlow() {
                   <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white">DMRV Framework</h3>
+              <h3 className="text-xl font-semibold text-black dark:text-white">DMRV Framework</h3>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -300,18 +300,18 @@ export default function GetStartedFlow() {
               ].map((dmrv, idx) => (
                 <div
                   key={idx}
-                  className={`group p-5 rounded-xl bg-gradient-to-br ${dmrv.bgColor} border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105`}
+                  className={`group p-5 rounded-xl bg-gradient-to-br ${dmrv.bgColor} border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 transition-all duration-300 hover:scale-105`}
                   style={{ animation: `fadeInUp 0.5s ease-out ${idx * 0.1}s both` }}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-10 h-10 rounded-full ${dmrv.color} bg-white/10 flex items-center justify-center font-bold text-lg`}>
+                    <div className={`w-10 h-10 rounded-full ${dmrv.color} bg-black/10 dark:bg-white/10 flex items-center justify-center font-bold text-lg`}>
                       {dmrv.letter}
                     </div>
                     <h4 className={`font-semibold ${dmrv.color}`}>{dmrv.title}</h4>
                   </div>
                   <ul className="space-y-1.5">
                     {dmrv.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
                         <span className="text-[#58B12F] shrink-0 mt-0.5">•</span>
                         <span>{item}</span>
                       </li>
@@ -328,8 +328,8 @@ export default function GetStartedFlow() {
                   <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
                 <div>
-                  <p className="text-white font-medium mb-1">This means:</p>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-black dark:text-white font-medium mb-1">This means:</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
                     Your cleanup can&apos;t be erased. Your contribution adds up over time. Your impact becomes provable.
                   </p>
                 </div>
@@ -345,7 +345,7 @@ export default function GetStartedFlow() {
                   <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white">The Outcome</h3>
+              <h3 className="text-xl font-semibold text-black dark:text-white">The Outcome</h3>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-4 mb-6">
@@ -368,20 +368,20 @@ export default function GetStartedFlow() {
               ].map((outcome, idx) => (
                 <div
                   key={idx}
-                  className="text-center p-4 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 group"
+                  className="text-center p-4 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 transition-all duration-300 group"
                   style={{ animation: `fadeInUp 0.5s ease-out ${idx * 0.15}s both` }}
                 >
                   <div className={`${outcome.color} mb-3 flex justify-center group-hover:scale-110 transition-transform`}>
                     {outcome.icon}
                   </div>
-                  <p className="text-sm text-gray-300 leading-relaxed">{outcome.text}</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{outcome.text}</p>
                 </div>
               ))}
             </div>
 
             {/* Tagline */}
-            <div className="text-center pt-4 border-t border-white/10">
-              <p className="text-sm text-gray-200 italic">
+            <div className="text-center pt-4 border-t border-black/10 dark:border-white/10">
+              <p className="text-sm text-gray-800 dark:text-gray-200 italic">
                 <span className="text-[#FAFF00] font-semibold not-italic">Impact first.</span> Web3 only where it helps.
               </p>
             </div>
@@ -418,15 +418,15 @@ export default function GetStartedFlow() {
       {/* Step: Start - Do you have / want Farcaster or Base App? */}
       {step === "start" && (
         <Card>
-          <h2 className="text-xl md:text-2xl font-medium text-white mb-4">
+          <h2 className="text-xl md:text-2xl font-medium text-black dark:text-white mb-4">
             Do you have a Farcaster account or the Base app?
           </h2>
-          <p className="text-gray-200 text-sm md:text-base mb-6">
+          <p className="text-gray-800 dark:text-gray-200 text-sm md:text-base mb-6">
             DeCleanup Rewards runs as a mini app inside Farcaster client or the Base app. If you prefer not to use either, you can use the full platform on Celo chain.
           </p>
           <div className="space-y-4 mb-6">
-            <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-              <p className="text-gray-300 font-medium mb-2">
+            <div className="rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4">
+              <p className="text-gray-700 dark:text-gray-300 font-medium mb-2">
                 <a
                   href={GUIDE_LINKS.farcasterRegister}
                   target="_blank"
@@ -436,12 +436,12 @@ export default function GetStartedFlow() {
                   Farcaster
                 </a>
               </p>
-              <p className="text-sm text-gray-200">
+              <p className="text-sm text-gray-800 dark:text-gray-200">
                 Farcaster is an open social protocol that lets people own their identity and social graph. Multiple apps can use the same feed, profiles, and followers, so your social presence isn’t locked into one platform.
               </p>
             </div>
-            <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-              <p className="text-gray-300 font-medium mb-2">
+            <div className="rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4">
+              <p className="text-gray-700 dark:text-gray-300 font-medium mb-2">
                 <a
                   href={GUIDE_LINKS.baseAppRegister}
                   target="_blank"
@@ -451,7 +451,7 @@ export default function GetStartedFlow() {
                   Base App
                 </a>
               </p>
-              <p className="text-sm text-gray-200">
+              <p className="text-sm text-gray-800 dark:text-gray-200">
                 Base App is an onchain consumer app built on Base that uses the Farcaster feed. It combines social posts, mini apps, payments, trading, chat, and earning into one place - so content isn’t just read, it’s actionable.
               </p>
             </div>
@@ -459,7 +459,7 @@ export default function GetStartedFlow() {
           <div className="flex flex-wrap gap-3">
             <button
               onClick={() => setStep("celo")}
-              className="px-5 py-3 rounded-xl border border-white/30 text-white hover:bg-white/10 transition"
+              className="px-5 py-3 rounded-xl border border-black/30 dark:border-white/30 text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition"
             >
               No - use full platform instead
             </button>
@@ -470,16 +470,16 @@ export default function GetStartedFlow() {
               Yes - I’ll use mini app
             </button>
           </div>
-          <p className="text-xs text-gray-400 mt-4">
+          <p className="text-xs text-gray-600 dark:text-gray-400 mt-4">
             Full guide:{" "}
             <Link href="/userguide#miniapp" className="text-[#58B12F] hover:text-[#FAFF00] underline">Mini app</Link>
             {" · "}
             <Link href="/userguide#fullapp" className="text-[#58B12F] hover:text-[#FAFF00] underline">Full app (Celo)</Link>
           </p>
-          <div className="mt-6 pt-4 border-t border-white/10">
+          <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
             <button
               onClick={() => setStep("intro")}
-              className="text-sm text-gray-200 hover:text-white"
+              className="text-sm text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
             >
               ← Back
             </button>
@@ -491,35 +491,35 @@ export default function GetStartedFlow() {
       {step === "choose" && (
         <>
           <Card>
-            <h2 className="text-xl md:text-2xl font-medium text-white mb-4">
+            <h2 className="text-xl md:text-2xl font-medium text-black dark:text-white mb-4">
               Choose one to get started
             </h2>
-            <p className="text-gray-200 text-sm mb-6">
+            <p className="text-gray-800 dark:text-gray-200 text-sm mb-6">
               You can add the other later. Pick the one you prefer to set up first.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => setStep("base_only")}
-                className="flex-1 p-5 rounded-xl border border-[#58B12F]/40 bg-[#58B12F]/10 text-white hover:bg-[#58B12F]/20 transition text-left"
+                className="flex-1 p-5 rounded-xl border border-[#58B12F]/40 bg-[#58B12F]/10 text-black dark:text-white hover:bg-[#58B12F]/20 transition text-left"
               >
                 <span className="font-medium block mb-1">Register on Base app</span>
-                <span className="text-sm text-gray-200">Use DeCleanup inside the Base mobile app</span>
+                <span className="text-sm text-gray-800 dark:text-gray-200">Use DeCleanup inside the Base mobile app</span>
               </button>
               <button
                 onClick={() => setStep("farcaster")}
-                className="flex-1 p-5 rounded-xl border border-[#58B12F]/40 bg-[#58B12F]/10 text-white hover:bg-[#58B12F]/20 transition text-left"
+                className="flex-1 p-5 rounded-xl border border-[#58B12F]/40 bg-[#58B12F]/10 text-black dark:text-white hover:bg-[#58B12F]/20 transition text-left"
               >
                 <span className="font-medium block mb-1">Register on Farcaster</span>
-                <span className="text-sm text-gray-200">Use DeCleanup mini app inside Farcaster / Warpcast</span>
+                <span className="text-sm text-gray-800 dark:text-gray-200">Use DeCleanup mini app inside Farcaster / Warpcast</span>
               </button>
             </div>
-            <p className="text-xs text-gray-400 mt-4">
+            <p className="text-xs text-gray-600 dark:text-gray-400 mt-4">
               <Link href="/userguide#miniapp" className="text-[#58B12F] hover:text-[#FAFF00] underline">Full user guide: Mini app →</Link>
             </p>
-            <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
               <button
                 onClick={() => setStep("start")}
-                className="text-sm text-gray-200 hover:text-white"
+                className="text-sm text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
               >
                 ← Back
               </button>
@@ -531,10 +531,10 @@ export default function GetStartedFlow() {
       {/* Step: Celo path */}
       {step === "celo" && (
         <Card>
-          <h2 className="text-xl md:text-2xl font-medium text-white mb-2">
+          <h2 className="text-xl md:text-2xl font-medium text-black dark:text-white mb-2">
             Try the full DeCleanup Rewards platform
           </h2>
-          <p className="text-gray-200 text-sm mb-4">
+          <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">
             Explore full dashboard, leaderboard, and governance. Works with a wallet (e.g. MetaMask) on Celo chain.
           </p>
           <div className="mb-4">
@@ -547,14 +547,14 @@ export default function GetStartedFlow() {
               Open DeCleanup dApp (currently on testnet) →
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mb-4">
+          <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
             <Link href="/userguide#fullapp" className="text-[#58B12F] hover:text-[#FAFF00] underline">Full user guide: Full app (Celo) →</Link>
           </p>
           <GuideLinks variant="celo" />
-          <div className="mt-6 pt-4 border-t border-white/10">
+          <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
             <button
               onClick={() => setStep("start")}
-              className="text-sm text-gray-200 hover:text-white"
+              className="text-sm text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
             >
               ← Back to start
             </button>
@@ -565,10 +565,10 @@ export default function GetStartedFlow() {
       {/* Step: Farcaster path - then “Also Base?” */}
       {step === "farcaster" && (
         <Card>
-          <h2 className="text-xl md:text-2xl font-medium text-white mb-2">
+          <h2 className="text-xl md:text-2xl font-medium text-black dark:text-white mb-2">
             DeCleanup on Farcaster
           </h2>
-          <p className="text-gray-200 text-sm mb-4">
+          <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">
             Open the DeCleanup mini app inside Farcaster. Log in with your Farcaster account and start logging cleanups.
           </p>
           <div className="mb-4 space-y-3">
@@ -589,12 +589,12 @@ export default function GetStartedFlow() {
               Open DeCleanup mini app on Farcaster →
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mb-4">
+          <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
             <Link href="/userguide#miniapp" className="text-[#58B12F] hover:text-[#FAFF00] underline">Full user guide: Mini app →</Link>
           </p>
-          <div className="mb-6 rounded-xl bg-white/5 border border-white/10 p-4">
-            <p className="text-sm text-gray-200 mb-2">
-              To fund your wallet: open the Farcaster wallet, press <strong className="text-gray-300">Deposit</strong>, then copy your wallet address. Transfer ETH from an exchange or another wallet to that address, or buy directly via a linked Coinbase account.
+          <div className="mb-6 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-4">
+            <p className="text-sm text-gray-800 dark:text-gray-200 mb-2">
+              To fund your wallet: open the Farcaster wallet, press <strong className="text-gray-700 dark:text-gray-300">Deposit</strong>, then copy your wallet address. Transfer ETH from an exchange or another wallet to that address, or buy directly via a linked Coinbase account.
             </p>
             <a
               href={GUIDE_LINKS.ethForGas}
@@ -605,13 +605,13 @@ export default function GetStartedFlow() {
               Tips and tutorials →
             </a>
           </div>
-          <p className="text-sm text-gray-200 mb-4">
+          <p className="text-sm text-gray-800 dark:text-gray-200 mb-4">
             Do you also want to use DeCleanup on the Base app?
           </p>
           <div className="flex flex-wrap gap-3">
             <button
               onClick={() => setStep("end")}
-              className="px-5 py-3 rounded-xl border border-white/30 text-white hover:bg-white/10 transition"
+              className="px-5 py-3 rounded-xl border border-black/30 dark:border-white/30 text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 transition"
             >
               No, I’m done
             </button>
@@ -622,10 +622,10 @@ export default function GetStartedFlow() {
               Yes - also open on Base app
             </button>
           </div>
-          <div className="mt-6 pt-4 border-t border-white/10">
+          <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
             <button
               onClick={() => setStep("choose")}
-              className="text-sm text-gray-200 hover:text-white"
+              className="text-sm text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
             >
               ← Back
             </button>
@@ -636,10 +636,10 @@ export default function GetStartedFlow() {
       {/* Step: Base only (user chose Base at “choose”) */}
       {step === "base_only" && (
         <Card>
-          <h2 className="text-xl md:text-2xl font-medium text-white mb-2">
+          <h2 className="text-xl md:text-2xl font-medium text-black dark:text-white mb-2">
             DeCleanup on Base app
           </h2>
-          <p className="text-gray-200 text-sm mb-4">
+          <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">
             Install the Base app, then open DeCleanup Rewards as a mini app inside it. Pin it to your apps to be able to always find it later.
           </p>
           <div className="space-y-3 mb-4">
@@ -660,14 +660,14 @@ export default function GetStartedFlow() {
               Open DeCleanup on Base app →
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mb-4">
+          <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
             <Link href="/userguide#miniapp" className="text-[#58B12F] hover:text-[#FAFF00] underline">Full user guide: Mini app →</Link>
           </p>
           <GuideLinks variant="base" />
-          <div className="mt-6 pt-4 border-t border-white/10">
+          <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
             <button
               onClick={() => setStep("choose")}
-              className="text-sm text-gray-200 hover:text-white"
+              className="text-sm text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
             >
               ← Back
             </button>
@@ -678,10 +678,10 @@ export default function GetStartedFlow() {
       {/* Step: Base after Farcaster (“Also use Base?” → Yes) */}
       {step === "base" && (
         <Card>
-          <h2 className="text-xl md:text-2xl font-medium text-white mb-2">
+          <h2 className="text-xl md:text-2xl font-medium text-black dark:text-white mb-2">
             DeCleanup on Base app
           </h2>
-          <p className="text-gray-200 text-sm mb-4">
+          <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">
             Install the Base app, then open DeCleanup Rewards as a mini app inside it. Pin it to your apps to be able to always find it later.
           </p>
           <div className="space-y-3 mb-4">
@@ -702,14 +702,14 @@ export default function GetStartedFlow() {
               Open DeCleanup on Base app →
             </Link>
           </div>
-          <p className="text-xs text-gray-400 mb-4">
+          <p className="text-xs text-gray-600 dark:text-gray-400 mb-4">
             <Link href="/userguide#miniapp" className="text-[#58B12F] hover:text-[#FAFF00] underline">Full user guide: Mini app →</Link>
           </p>
           <GuideLinks variant="base" />
-          <div className="mt-6 pt-4 border-t border-white/10">
+          <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
             <button
               onClick={() => setStep("farcaster")}
-              className="text-sm text-gray-200 hover:text-white"
+              className="text-sm text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white"
             >
               ← Back to Farcaster step
             </button>
@@ -720,10 +720,10 @@ export default function GetStartedFlow() {
       {/* Step: End */}
       {step === "end" && (
         <Card>
-          <h2 className="text-xl md:text-2xl font-medium text-white mb-2">
+          <h2 className="text-xl md:text-2xl font-medium text-black dark:text-white mb-2">
             You’re all set
           </h2>
-          <p className="text-gray-200 text-sm mb-4">
+          <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">
             Use DeCleanup on Farcaster to log cleanups and earn rewards. Need the full dApp or Base app later? Come back to this page or use the links on the main page.
           </p>
           <Link

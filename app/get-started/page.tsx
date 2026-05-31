@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function GetStartedPage() {
   return (
-    <main className="min-h-screen bg-black text-white font-sans overflow-x-hidden selection:bg-[#58B12F] selection:text-white">
+    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans overflow-x-hidden selection:bg-[#58B12F] selection:text-black dark:selection:text-white">
       <SubPageNav />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 pt-24 pb-12 md:py-16">
 
